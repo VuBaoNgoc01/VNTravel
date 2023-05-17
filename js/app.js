@@ -206,17 +206,3 @@ $('.slide-partner').slick({
 });
 
 
-
-// $('.slider-gallery').slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     rows: 3,
-//     slidesToScroll: 3,
-//     speed: 800,
-//     dots: false,
-//     autoplay: false,
-//     arrows: true,
-//     prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa-light fa-chevron-left'></i></button>",
-//     nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa-light fa-chevron-right'></i></button>",
-// });
-
