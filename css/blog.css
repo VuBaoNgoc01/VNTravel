@@ -105,7 +105,15 @@
     width: 100%;
     padding: 10px;
     gap: 20px;
+    border-radius: 8px;
     background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s linear;
+}
+
+.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .img-card-page-blog {
@@ -177,21 +185,23 @@
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-title h3 {
-    color: #474d4b;
+    color: var(--primary-color);
     font-size: 24px;
     font-weight: 600;
     line-height: 27px;
+    transition: all 0.25s linear;
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog:hover .info-card-page-blog .info-title h3 {
-    color: #ADA075;
+    color: var(--hover-color);
     font-size: 24px;
     font-weight: 600;
     line-height: 27px;
+    transition: all 0.25s linear;
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-title span {
-    color: #1f2933;
+    color: #196232;
     font-size: 18px;
     line-height: 24px;
 }
@@ -239,12 +249,12 @@
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view span a {
     font-size: 14px;
-    color: #989898;
+    color: var(--primary-color);
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view span a:hover {
     font-size: 14px;
-    color: #1f2933;
+    color: var(--hover-color);
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share i {
@@ -292,12 +302,12 @@
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share i>ul>li {
     display: flex;
     align-items: center;
-    background-color: #474d4b;
+    background-color: var(--primary-color);
     transition: all 0.3s linear;
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share i>ul>li:hover {
-    background-color: #6a6a6a;
+    background-color: #28bf5a;
     transition: all 0.3s linear;
 }
 
@@ -305,7 +315,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #dedede;
+    color: #fff;
     font-size: 16px;
     position: relative;
     font-weight: 300;
@@ -313,13 +323,13 @@
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share .share>ul>li>a>i {
-    color: #dedede;
+    color: #fff;
     font-size: 16px;
     margin: 0 10px 0px 0px;
 }
 
-.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share .share>ul>li>span {
-    color: #dedede;
+.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share .share>ul>li>a>span {
+    color: #fff;
     font-size: 16px;
     font-weight: 300;
 }
@@ -333,36 +343,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     border: none;
     background-color: transparent;
     outline: none;
     font-size: 14px;
-    color: #989898;
+    color: var(--primary-color);
     text-transform: uppercase;
     cursor: pointer;
 }
 
-.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .btn-view button span {
+.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .btn-view button a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    border: none;
-    background-color: transparent;
-    outline: none;
     font-size: 14px;
-    color: #989898;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .btn-view button a span {
+    font-size: 14px;
+    color: var(--primary-color);
     text-transform: uppercase;
     cursor: pointer;
 }
 
-.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .btn-view button i {
+.box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .btn-view button a i {
     font-size: 12px;
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .btn-view button:hover :is(span, i) {
-    color: #1f2933;
+    color: var(--hover-color);
 }
 
 /* Styling slect-blog */
@@ -401,7 +413,7 @@
 
 .box-page-blog .wrap-page-blog .select-blog .search-blog button {
     position: absolute;
-    top: 12px;
+    top: 10px;
     right: 10px;
     border: none;
     background-color: transparent;
@@ -434,7 +446,7 @@
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li>span {
-    color: #ADA075;
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 600;
     padding: 20px;
@@ -447,6 +459,10 @@
     justify-content: space-between;
 }
 
+.box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li:hover>span {
+    color: var(--hover-color);
+}
+
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li>.show-select>i {
     transition: all 0.2s linear;
 }
@@ -456,7 +472,14 @@
     background-color: #fff;
     display: none;
     height: 0;
-    transition: all 0.5s ease-in-out;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .drop-nav-blog:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li>.show-select.open>i {
@@ -482,11 +505,11 @@
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .drop-nav-blog>li>a {
     font-size: 14px;
     padding: 15px 20px;
-    color: #474d4b;
+    color: var(--primary-color);
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .drop-nav-blog>li>a:hover {
-    color: #ADA075;
+    color: var(--hover-color);
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li>.show-select.open~.nav-icon-blog {
@@ -494,7 +517,7 @@
     width: 100%;
     grid-template-columns: auto auto auto auto;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px 0px;
 }
 
@@ -504,7 +527,7 @@
     grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: center;
-    padding: 10px 30px;
+    padding: 15px 15px;
     gap: 10px;
 }
 
@@ -515,12 +538,12 @@
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .nav-icon-blog>li>a {
     padding: 5px;
-    color: #474d4b;
+    color: #16512b;
     transition: all 0.25s linear;
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .nav-icon-blog>li>a:hover {
-    color: #ADA075;
+    color: var(--hover-color);
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .nav-icon-blog>li>a i {
@@ -535,6 +558,8 @@
     padding: 0;
     height: 70px;
     width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .nav-img-blog>li>a>img {

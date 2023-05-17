@@ -28,7 +28,7 @@ img {
     --second-font: 'Inter', sans-serif;
     --primary-color: #197c3a;
     --text-color: #94999f;
-    --hover-color: #8aeba9;
+    --hover-color: #28bf5a;
 }
 
 /* //////////////////// */
@@ -102,11 +102,13 @@ img {
     z-index: 999;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    border-radius: 8px;
     transition: all 0.25s linear;
 }
 
@@ -192,8 +194,10 @@ img {
 
 .box-navbar.scrollMenu {
     background-color: #fff;
-    box-shadow: 0px 0px 15px #333333;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s linear;
+    width: 99%;
+    margin: 0;
 }
 
 .box-navbar.scrollMenu .wrap-navbar {
