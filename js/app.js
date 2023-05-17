@@ -15,15 +15,15 @@ let title = document.getElementById("title");
 window.addEventListener('scroll', function () {
     var value = window.scrollY;
 
-    bg.style.top = value * 1 + 'px';
-    moutain1.style.top = value * 1 + 'px';
-    moutain2.style.top = value * 1 + 'px';
-    moutain3.style.top = value * 1 + 'px';
+    bg.style.top = value * 0.5 + 'px';
+    moutain1.style.top = value * 0.5 + 'px';
+    moutain2.style.top = value * 0.5 + 'px';
+    moutain3.style.top = value * 0.5 + 'px';
     moutain4.style.left = value * -1 + 'px';
     moutain5.style.left = value * 0.5 + 'px';
-    boat.style.top = value * 1 + 'px';
+    boat.style.top = value * 0.5 + 'px';
     boat.style.left = value * 2 + 'px';
-    title.style.marginTop = value * 2.5 + 'px';
+    title.style.marginTop = value * 1.5 + 'px';
 
 });
 
@@ -182,11 +182,17 @@ $('.slide-partner').slick({
         {
             breakpoint: 1000,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 3,
             }
         },
         {
             breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 500,
             settings: {
                 slidesToShow: 1,
             }
