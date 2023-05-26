@@ -15,17 +15,51 @@ let title = document.getElementById("title");
 window.addEventListener('scroll', function () {
     var value = window.scrollY;
 
+    //Top
+
     bg.style.top = value * 0.5 + 'px';
     moutain1.style.top = value * 0.5 + 'px';
     moutain2.style.top = value * 0.5 + 'px';
     moutain3.style.top = value * 0.5 + 'px';
-    moutain4.style.left = value * -1 + 'px';
-    moutain5.style.left = value * 0.5 + 'px';
-    boat.style.top = value * 0.5 + 'px';
-    boat.style.left = value * 2 + 'px';
-    title.style.marginTop = value * 1.5 + 'px';
+    moutain4.style.marginTop = value * -0.18 + 'px';
+    moutain5.style.marginTop = value * -0.18 + 'px';
+    title.style.marginTop = value * 1.3 + 'px';
+
+    //Left
+    moutain1.style.left = value * -0.2 + 'px';
+    moutain2.style.left = value * 0.2 + 'px';
+    moutain3.style.left = value * 0.2 + 'px';
 
 });
+
+//Active btn-CTA-search
+
+const ctaSearch = document.getElementById("cta-search");
+const formSearch = document.getElementById("wrap-form");
+
+ctaSearch.addEventListener("click", () => {
+    ctaSearch.classList.toggle("active");
+    formSearch.classList.toggle("active");
+});
+
+//Active btn-CTA-Userlog
+
+const ctaUser = document.getElementById("cta-user");
+const formLog = document.getElementById("form-log");
+
+ctaUser.addEventListener("click", () => {
+    ctaUser.classList.toggle("active");
+    formLog.classList.toggle("active");
+});
+
+//flatpickr date-time
+
+flatpickr("input[type=date]", {
+    minDate: "today",
+    maxDate: new Date().fp_incr(30),
+});
+
+//Scroll
 
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -90,7 +124,7 @@ $('.slide-tour').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 800,
+    speed: 500,
     dots: false,
     autoplay: false,
     centerMode: true,
@@ -138,10 +172,9 @@ $('.slide-blog').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 800,
+    speed: 500,
     dots: false,
     autoplay: false,
-    cssEase: 'linear',
     arrows: true,
     prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa-light fa-chevron-left'></i></button>",
     nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa-light fa-chevron-right'></i></button>",

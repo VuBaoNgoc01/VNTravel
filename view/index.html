@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
             integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
+            integrity="sha512-MQXduO8IQnJVq1qmySpN87QQkiR1bZHtorbJBD0tzy7/0U9+YIC93QWHeGTEoojMVHWWNkoCp8V6OzVSYrX0oQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Travel Tour</title>
     </head>
 
@@ -37,23 +40,18 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="../view/aboutus.html">
                                     About Us
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="../view/destination.html">
                                     Destinations
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="../view/tour.html">
                                     Tours
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Gallery
                                 </a>
                             </li>
                             <li>
@@ -62,7 +60,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="../view/contact.html">
                                     Contact
                                 </a>
                             </li>
@@ -71,12 +69,73 @@
                     </div>
                 </div>
                 <div class="box-cta">
-                    <a href="#" class="cta-search">
+                    <a class="cta-search" id="cta-search">
                         <i class="fa-light fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
                     </a>
-                    <a href="#" class="cta-user">
-                        <i class="fa-light fa-circle-user"></i>
+                    <a class="cta-user" id="cta-user">
+                        <i class="fa-light fa-user"></i>
                     </a>
+                </div>
+            </div>
+            <div class="wrap-form" id="wrap-form">
+                <form action="" class="wrap">
+                    <div class="location">
+                        <label for="">Địa điểm</label>
+                        <select name="" id="">
+                            <option value="0">Địa điểm</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">Ninh Bình</option>
+                            <option value="3">Hội An</option>
+                            <option value="4">Huế</option>
+                            <option value="5">Sapa</option>
+                            <option value="6">Nha Trang</option>
+                        </select>
+                    </div>
+                    <div class="depature">
+                        <label for="">
+                            Ngày khởi hành
+                        </label>
+                        <input type="date" placeholder="Ngày khởi hành">
+                    </div>
+                    <div class="adult">
+                        <label for="">Người lớn</label>
+                        <input type="text" placeholder="0 người lớn">
+                    </div>
+                    <div class="children">
+                        <label for="">
+                            Trẻ nhỏ
+                        </label>
+                        <input type="text" placeholder="0 Trẻ nhỏ">
+                    </div>
+                    <button class="btn-search">
+                        Tìm kiếm
+                    </button>
+                </form>
+            </div>
+            <div class="user-log" id="form-log">
+                <div class="user-login">
+                    <h2>Đăng nhập</h2>
+                    <form action="">
+                        <div class="enter-name">
+                            <input type="text">
+                            <label for="">Tài khoản</label>
+                        </div>
+                        <div class="enter-pass">
+                            <input type="password">
+                            <label for="">Mật khẩu</label>
+                        </div>
+                        <div class="forgot-pass">
+                            <a href="">Quên mật khẩu?</a>
+                        </div>
+                        <button class="btn-login">
+                            Đăng nhập
+                        </button>
+                        <div class="change-log">
+                            <span>Bạn chưa có tài khoản?</span>
+                            <a href="">Đăng ký</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -96,8 +155,6 @@
             <img src="../images/moutain3.png" id="moutain3">
             <img src="../images/moutain4.png" id="moutain4">
             <img src="../images/moutain5.png" id="moutain5">
-            <img src="../images/boat.png" id="boat">
-            <img src="../images/cloud2.png" id="cloud2">
             <div class="title" id="title">
                 <span>
                     Travel
@@ -124,7 +181,11 @@
                         </div>
                         <div class="filter-black"></div>
                         <div class="post-info">
-                            <h4>Hà Nội</h4>
+                            <h4>Hồ Hoàn Kiếm</h4>
+                            <span>
+                                <i class="fa-regular fa-location-dot"></i>
+                                Hà Nội
+                            </span>
                             <p>Một thành phố đầy lịch sử, văn hóa và kiến trúc, là điểm đến du lịch hấp dẫn với nhiều di
                                 tích, danh thắng và đặc sản ẩm
                                 thực.
@@ -138,7 +199,11 @@
                         </div>
                         <div class="filter-black"></div>
                         <div class="post-info">
-                            <h4>Ninh Bình</h4>
+                            <h4>Tràng An</h4>
+                            <span>
+                                <i class="fa-regular fa-location-dot"></i>
+                                Ninh Bình
+                            </span>
                             <p>Một tỉnh thuộc miền Trung Bắc Việt Nam. Tại đây
                                 có thể tham gia các hoạt động như chèo thuyền trên sông, leo núi, ngắm cảnh, tắm suối,
                                 thưởng thức ẩm thực đặc sản của
@@ -153,7 +218,11 @@
                         </div>
                         <div class="filter-black"></div>
                         <div class="post-info">
-                            <h4>Cố Đô Huế</h4>
+                            <h4>Kinh thành Huế</h4>
+                            <span>
+                                <i class="fa-regular fa-location-dot"></i>
+                                Huế
+                            </span>
                             <p>Một thành phố ở miền Trung Việt Nam. Tại đây
                                 có thể khám phá lịch sử, văn hóa, ẩm thực của Huế, tham quan các di tích, thưởng thức
                                 các món ăn đặc trưng.
@@ -167,7 +236,11 @@
                         </div>
                         <div class="filter-black"></div>
                         <div class="post-info">
-                            <h4>Phố Cổ - Hội An</h4>
+                            <h4>Phố Cổ</h4>
+                            <span>
+                                <i class="fa-regular fa-location-dot"></i>
+                                Hội An
+                            </span>
                             <p>Một khu phố cổ còn nguyên vẹn và rất đẹp ở miền Trung Việt Nam. Nơi đây có nhiều di tích
                                 kiến trúc và văn hóa và
                                 có thể thưởng thức ẩm thực đặc trưng của Hội An.
@@ -181,7 +254,11 @@
                         </div>
                         <div class="filter-black"></div>
                         <div class="post-info">
-                            <h4>Hạ Long Bay</h4>
+                            <h4>Vịnh Hạ Long</h4>
+                            <span>
+                                <i class="fa-regular fa-location-dot"></i>
+                                Hải Phòng
+                            </span>
                             <p>Một trong những điểm đến du lịch hàng đầu ở Việt Nam.
                                 Nơi đây có hơn 1.600 hòn đảo đá vôi nổi tiếng trên thế giới với cảnh quan tuyệt đẹp,
                             </p>
@@ -210,8 +287,12 @@
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Cố Đô Huế</h4>
+                                <h4>Hà Nội - Cố Đô Huế - Đồi Vọng Cảnh - Chùa Thiên Mụ</h4>
                             </a>
+                            <div class="time-tour">
+                                <i class="fa-regular fa-timer"></i>
+                                <span>3 Ngày 2 Đêm</span>
+                            </div>
                             <div class="vote-tour">
                                 <div class="vote-star">
                                     <i class="fa-sharp fa-solid fa-star"></i>
@@ -224,28 +305,25 @@
                                     <p>(<span>1005</span> Đánh giá)</p>
                                 </div>
                             </div>
-                            <div class="time-tour">
-                                <i class="fa-regular fa-timer"></i>
-                                <span>3 Ngày 2 Đêm</span>
-                            </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
 
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -257,7 +335,7 @@
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Phố cổ Hội An</h4>
+                                <h4>Hà Nội - Tràng An/Ninh Bình - Phố cổ Hội An</h4>
                             </a>
                             <div class="vote-tour">
                                 <div class="vote-star">
@@ -275,24 +353,24 @@
                                 <i class="fa-regular fa-timer"></i>
                                 <span>3 Ngày 2 Đêm</span>
                             </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
-
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -305,7 +383,7 @@
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Nha Trang</h4>
+                                <h4>Hà Nội - Nha Trang - Tháp Bà Ponagar - Nhà thờ Núi</h4>
                             </a>
                             <div class="vote-tour">
                                 <div class="vote-star">
@@ -323,24 +401,24 @@
                                 <i class="fa-regular fa-timer"></i>
                                 <span>3 Ngày 2 Đêm</span>
                             </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
-
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -353,7 +431,7 @@
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Sapa</h4>
+                                <h4>Hà Nội - Lũng Cú - Tà Xùa - Sspa</h4>
                             </a>
                             <div class="vote-tour">
                                 <div class="vote-star">
@@ -371,23 +449,24 @@
                                 <i class="fa-regular fa-timer"></i>
                                 <span>3 Ngày 2 Đêm</span>
                             </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -396,11 +475,10 @@
                     <div class="card-tour">
                         <div class="img-card-tour">
                             <img src="../images/sapa2.jpg" alt="">
-
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Sapa</h4>
+                                <h4>Hà Nội - Sapa - Tà Xùa - Lũng Cú</h4>
                             </a>
                             <div class="vote-tour">
                                 <div class="vote-star">
@@ -418,23 +496,24 @@
                                 <i class="fa-regular fa-timer"></i>
                                 <span>3 Ngày 2 Đêm</span>
                             </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -446,7 +525,7 @@
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Cố Đô Huế</h4>
+                                <h4>Tour Hà Nội - Cố Đô Huế / Thiên Viện Trúc Lâm Bạch Mã</h4>
                             </a>
                             <div class="vote-tour">
                                 <div class="vote-star">
@@ -464,24 +543,24 @@
                                 <i class="fa-regular fa-timer"></i>
                                 <span>3 Ngày 2 Đêm</span>
                             </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
-
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -493,7 +572,7 @@
                         </div>
                         <div class="info-card-tour">
                             <a href="#">
-                                <h4>Hà Nội - Cố Đô Huế</h4>
+                                <h4>Tour Hà Nội - Cố Đô Huế - Lăng Cô</h4>
                             </a>
                             <div class="vote-tour">
                                 <div class="vote-star">
@@ -511,24 +590,24 @@
                                 <i class="fa-regular fa-timer"></i>
                                 <span>3 Ngày 2 Đêm</span>
                             </div>
-                            <div class="price-tour">
-                                <span class="price-old">
-                                    3,000,000 VNĐ
-                                </span>
-                                <span class="price-new">
-                                    2,500,000 VNĐ
-                                </span>
-                            </div>
-
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, laborum nobis
+                                at
+                                facilis nihil totam necessitatibus eligendi id impedit architecto quod suscipit
+                                minus
+                                sit explicabo commodi a fugiat consectetur illo.</p>
                             <div class="btn-card-tour">
+                                <div class="price-tour">
+                                    <span class="price-old">
+                                        3,000,000 VNĐ
+                                    </span>
+                                    <span class="price-new">
+                                        2,500,000 VNĐ
+                                    </span>
+                                </div>
                                 <button class="btn-view">
                                     <a href="#">
-                                        Xem chi tiết
-                                    </a>
-                                </button>
-                                <button class="btn-book">
-                                    <a href="#">
-                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span>Đặt Tour ngay</span>
+                                        <i class="fa-regular fa-cart-shopping-fast"></i>
                                     </a>
                                 </button>
                             </div>
@@ -701,7 +780,7 @@
         <section class="box-partner">
             <div class="wrap wrap-partner">
                 <div class="title-partner">
-                    <h3>Our Partner</h3>
+                    <h3>Đối tác của chúng tôi</h3>
                 </div>
                 <div class="list-partner slide-partner">
                     <div class="logo-partner">
@@ -757,11 +836,11 @@
                             <i class="fa-regular fa-phone"></i>
                             <span>038-709-4970</span>
                         </a>
-                        <a href="#">
+                        <a href="mailto:vbngoc211201@gmail.com">
                             <i class="fa-regular fa-envelope"></i>
                             <span>vbngoc211201@gmail.com</span>
                         </a>
-                        <a href="#">
+                        <a>
                             <i class="fa-regular fa-location-dot"></i>
                             <span>59 SN, P.Đức Thắng, Q.Bắc Từ Liêm, Hà Nội</span>
                         </a>
@@ -793,6 +872,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"
+            integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <script src="../js/app.js"></script>
         <script src="./w3-include-js.js"></script>
 
