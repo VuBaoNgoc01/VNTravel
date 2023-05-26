@@ -2,11 +2,29 @@
 w3.includeHTML(myCallback);
 function myCallback() {
 
-    $("#scroll-to-top").click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 100)
-    })
+    //Scroll
+
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if (this.scrollY > 20) {
+                $('.box-navbar').addClass("scrollMenu")
+            } else {
+                $('.box-navbar').removeClass("scrollMenu")
+            }
+
+            if (this.scrollY > 200) {
+                $('.scroll-to-top').addClass("active")
+            } else {
+                $('.scroll-to-top').removeClass("active")
+            }
+        });
+
+        $("#scroll-to-top").click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 100)
+        })
+    });
 
     //Active select-blog
 
