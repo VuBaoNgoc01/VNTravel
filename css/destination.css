@@ -36,7 +36,14 @@
     text-align: center;
 }
 
-.box-destinationPage .wrap-destinationPage .btn-filter {
+.box-destinationPage .wrap-destinationPage .search-change {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .btn-filter {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -45,7 +52,7 @@
     gap: 30px;
 }
 
-.box-destinationPage .wrap-destinationPage .btn-filter button {
+.box-destinationPage .wrap-destinationPage .search-change .btn-filter button {
     position: relative;
     border: none;
     outline: none;
@@ -58,7 +65,7 @@
     cursor: pointer;
 }
 
-.box-destinationPage .wrap-destinationPage .btn-filter button::after {
+.box-destinationPage .wrap-destinationPage .search-change .btn-filter button::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -68,15 +75,15 @@
     background-color: transparent;
 }
 
-.box-destinationPage .wrap-destinationPage .btn-filter button:hover {
+.box-destinationPage .wrap-destinationPage.search-change .btn-filter button:hover {
     background-color: var(--hover-color);
 }
 
-.box-destinationPage .wrap-destinationPage .btn-filter button.active {
+.box-destinationPage .wrap-destinationPage.search-change .btn-filter button.active {
     color: var(--primary-color);
 }
 
-.box-destinationPage .wrap-destinationPage .btn-filter button.active::after {
+.box-destinationPage .wrap-destinationPage .search-change .btn-filter button.active::after {
     color: var(--primary-color);
     content: '';
     position: absolute;
@@ -87,13 +94,59 @@
     background-color: var(--primary-color);
 }
 
+.box-destinationPage .wrap-destinationPage .search-change .grid-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .grid-filter i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .grid-filter .fa-grid {
+    display: block;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .grid-filter.active .fa-grid {
+    display: none;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .grid-filter .fa-list {
+    display: none;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .grid-filter.active .fa-list {
+    display: block;
+}
+
 .box-destinationPage .wrap-destinationPage .list-destination {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 30px;
     width: 100%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+.box-destinationPage .wrap-destinationPage .list-destination.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-destinationPage .wrap-destinationPage .list-destination.active .card-destination {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+}
+
+.box-destinationPage .wrap-destinationPage .list-destination.active .card-destination .img-card {
+    height: 350px;
 }
 
 .box-destinationPage .wrap-destinationPage .list-destination .card-destination {
@@ -114,6 +167,7 @@
 
 .box-destinationPage .wrap-destinationPage .list-destination .card-destination:hover {
     box-shadow: 0 10px 20px #00000066;
+    transform: translateY(-8px);
     transition: all 0.25s linear;
 }
 

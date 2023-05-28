@@ -47,13 +47,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="../view/tour.html">
                                     Tours
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Gallery
                                 </a>
                             </li>
                             <li>
@@ -62,7 +57,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="../view/contact.html">
                                     Contact
                                 </a>
                             </li>
@@ -71,12 +66,73 @@
                     </div>
                 </div>
                 <div class="box-cta">
-                    <a href="#" class="cta-search">
+                    <a class="cta-search" id="cta-search">
                         <i class="fa-light fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
                     </a>
-                    <a href="#" class="cta-user">
-                        <i class="fa-light fa-circle-user"></i>
+                    <a class="cta-user" id="cta-user">
+                        <i class="fa-light fa-user"></i>
                     </a>
+                </div>
+            </div>
+            <div class="wrap-form" id="wrap-form">
+                <form action="" class="wrap">
+                    <div class="location">
+                        <label for="">Địa điểm</label>
+                        <select name="" id="">
+                            <option value="0">Địa điểm</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">Ninh Bình</option>
+                            <option value="3">Hội An</option>
+                            <option value="4">Huế</option>
+                            <option value="5">Sapa</option>
+                            <option value="6">Nha Trang</option>
+                        </select>
+                    </div>
+                    <div class="depature">
+                        <label for="">
+                            Ngày khởi hành
+                        </label>
+                        <input type="date" placeholder="Ngày khởi hành">
+                    </div>
+                    <div class="adult">
+                        <label for="">Người lớn</label>
+                        <input type="text" placeholder="0 người lớn">
+                    </div>
+                    <div class="children">
+                        <label for="">
+                            Trẻ nhỏ
+                        </label>
+                        <input type="text" placeholder="0 Trẻ nhỏ">
+                    </div>
+                    <button class="btn-search">
+                        Tìm kiếm
+                    </button>
+                </form>
+            </div>
+            <div class="user-log" id="form-log">
+                <div class="user-login">
+                    <h2>Đăng nhập</h2>
+                    <form action="">
+                        <div class="enter-name">
+                            <input type="text">
+                            <label for="">Tài khoản</label>
+                        </div>
+                        <div class="enter-pass">
+                            <input type="password">
+                            <label for="">Mật khẩu</label>
+                        </div>
+                        <div class="forgot-pass">
+                            <a href="">Quên mật khẩu?</a>
+                        </div>
+                        <button class="btn-login">
+                            Đăng nhập
+                        </button>
+                        <div class="change-log">
+                            <span>Bạn chưa có tài khoản?</span>
+                            <a href="">Đăng ký</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </nav>

@@ -1,3 +1,6 @@
+
+//Filter btn search destination 
+
 const btnFilter = document.querySelectorAll(".btn-filter button");
 const cardFilter = document.querySelectorAll(".list-destination .card-destination");
 
@@ -14,5 +17,15 @@ const filterCard = e => {
     });
 }
 
-
 btnFilter.forEach(button => button.addEventListener("click", filterCard));
+
+
+//Active change grid filter
+
+const btnGrid = document.getElementById("btn-grid");
+const gridFilter = document.getElementById("grid-filter");
+
+btnGrid.addEventListener("click", () => {
+    btnGrid.classList.toggle("active");
+    gridFilter.classList.toggle("active");
+}); 
