@@ -26,6 +26,26 @@ function myCallback() {
         })
     });
 
+    //Active btn-CTA-search
+
+    const ctaSearch = document.getElementById("cta-search");
+    const formSearch = document.getElementById("wrap-form");
+
+    ctaSearch.addEventListener("click", () => {
+        ctaSearch.classList.toggle("active");
+        formSearch.classList.toggle("active");
+    });
+
+    //Active btn-CTA-Userlog
+
+    const ctaUser = document.getElementById("cta-user");
+    const formLog = document.getElementById("form-log");
+
+    ctaUser.addEventListener("click", () => {
+        ctaUser.classList.toggle("active");
+        formLog.classList.toggle("active");
+    });
+
     //Active select-blog
 
     var btnBlog = document.getElementsByClassName(('show-select')[0]);

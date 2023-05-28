@@ -2,33 +2,20 @@
 
 
 let bg = document.getElementById("bg");
-let sea = document.getElementById("sea");
 let moutain1 = document.getElementById("moutain1");
-let moutain2 = document.getElementById("moutain2");
-let moutain3 = document.getElementById("moutain3");
-let moutain4 = document.getElementById("moutain4");
-let moutain5 = document.getElementById("moutain5");
-let boat = document.getElementById("boat");
-let cloud2 = document.getElementById("cloud2");
+let person = document.getElementById("person");
 let title = document.getElementById("title");
 
 window.addEventListener('scroll', function () {
     var value = window.scrollY;
 
-    //Top
-
-    bg.style.top = value * 0.5 + 'px';
-    moutain1.style.top = value * 0.5 + 'px';
-    moutain2.style.top = value * 0.5 + 'px';
-    moutain3.style.top = value * 0.5 + 'px';
-    moutain4.style.marginTop = value * -0.18 + 'px';
-    moutain5.style.marginTop = value * -0.18 + 'px';
+    moutain1.style.marginTop = value * -0.3 + 'px';
+    moutain1.style.scale = 1 + value * 0.0002;
+    //person.style.top = value * 0.5 + 'px';
+    person.style.left = value * -0.5 + 'px';
+    //person.style.scale = 1 - value * 0.0003;
     title.style.marginTop = value * 1.3 + 'px';
 
-    //Left
-    moutain1.style.left = value * -0.2 + 'px';
-    moutain2.style.left = value * 0.2 + 'px';
-    moutain3.style.left = value * 0.2 + 'px';
 
 });
 
