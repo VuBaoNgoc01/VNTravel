@@ -1654,6 +1654,7 @@ img {
 
 @media (min-width: 1400px) {
     .wrap {
+        max-width: 1350px;
         width: 85%;
     }
 }

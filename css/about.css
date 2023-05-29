@@ -229,6 +229,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 30px 30px 0;
+    border-radius: 12px 12px 0 0;
+    background-color: #fff;
 }
 
 .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company {
@@ -237,6 +240,9 @@
     justify-content: center;
     flex-direction: row-reverse;
     width: 100%;
+    padding: 0 30px 30px;
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
 }
 
 .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .content,
