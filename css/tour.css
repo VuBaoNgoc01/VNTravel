@@ -420,6 +420,7 @@
     font-family: var(--normal-font);
     font-size: 16px;
     color: #fff;
+    width: 100%;
 }
 
 /* <<<List post tour add Active>>> */

@@ -222,6 +222,3 @@ function renderResults(results) {
 // <<<<<===END===>>>>>
 
 
-
-// <<<<<<<<<<<<<==TOUR==>>>>>>>>>>>>>
-
