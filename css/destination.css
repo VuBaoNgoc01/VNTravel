@@ -181,6 +181,7 @@
 
 .box-destinationPage .wrap-destinationPage .search-change .grid-filter:active {
     transform: scale(0.9);
+    transition: all 0.25s linear;
 }
 
 .box-destinationPage .wrap-destinationPage .search-change .grid-filter i {

@@ -1,5 +1,6 @@
+// <<<<<<<<<<<<<==DESTINATIONS==>>>>>>>>>>>>>
 
-//Filter btn search destination 
+//Filter btn search destination by name 
 
 const btnFilter = document.querySelectorAll(".btn-filter button");
 const cardFilter = document.querySelectorAll(".list-destination .card-destination");
@@ -20,15 +21,69 @@ const filterCard = e => {
 btnFilter.forEach(button => button.addEventListener("click", filterCard));
 
 
+//Filter btn search tour by name
+
+const btnFind = document.querySelectorAll(".search-btnName button");
+const cardTour = document.querySelectorAll(".list-post .post-card");
+
+const findCard = e => {
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+
+    cardTour.forEach(card => {
+        card.classList.add("hide");
+
+        if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+            card.classList.remove("hide")
+        }
+    });
+}
+
+btnFind.forEach(button => button.addEventListener("click", findCard));
+
+// <<<<<===END===>>>>>
+
+//Filter btn search tour by price
+
+const finByPrice = document.querySelectorAll(".search-btnPrice button");
+const priceTour = document.querySelectorAll(".list-post .post-card");
+
+const findPrice = e => {
+    document.querySelector(".active-price").classList.remove("active-price");
+    e.target.classList.add("active-price");
+
+    priceTour.forEach(card => {
+        card.classList.add("hide-price");
+
+        if (card.dataset.price === e.target.dataset.price || e.target.dataset.price === "all") {
+            card.classList.remove("hide-price")
+        }
+    });
+}
+
+finByPrice.forEach(button => button.addEventListener("click", findPrice));
+
+// <<<<<===END===>>>>>
+
+// <<<<<===END===>>>>>
+
 //Active change grid filter
 
 const btnGrid = document.getElementById("btn-grid");
 const gridFilter = document.getElementById("grid-filter");
+const filterChange = document.getElementById("list-tour");
+
 
 btnGrid.addEventListener("click", () => {
     btnGrid.classList.toggle("active");
     gridFilter.classList.toggle("active");
 });
+
+btnGrid.addEventListener("click", () => {
+    filterChange.classList.toggle("active");
+});
+
+// <<<<<===END===>>>>>
 
 //Search Input
 const search = () => {
@@ -71,6 +126,8 @@ const search = () => {
     }
 
 }
+
+// <<<<<===END===>>>>>
 
 //search suggestions
 let searchable = [
@@ -117,5 +174,9 @@ function renderResults(results) {
     resultsWrapper.innerHTML = `<ul>${content}</ul>`;
 }
 
+// <<<<<===END===>>>>>
 
+
+
+// <<<<<<<<<<<<<==TOUR==>>>>>>>>>>>>>
 
