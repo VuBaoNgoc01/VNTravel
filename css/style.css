@@ -591,9 +591,9 @@ img {
 .box-home .title h1 {
     position: relative;
     z-index: 2;
-    font-size: 10em;
+    font-size: 8em;
     font-weight: 500;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
     color: #fff;
     line-height: 150px;
 }

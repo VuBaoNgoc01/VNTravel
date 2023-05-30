@@ -129,6 +129,51 @@ const search = () => {
 
 // <<<<<===END===>>>>>
 
+
+//Search Input - Tour
+const find = () => {
+    const searchTour = document.getElementById("find-tour").value.toLowerCase();
+    const listTour = document.getElementById("list-tour");
+    const post = document.querySelectorAll(".post-card");
+    const tagTour = listTour.getElementsByTagName("span");
+    const nameTour = listTour.getElementsByTagName("a");
+
+    // search by tagname
+
+    for (var i = 0; i < tagTour.length; i++) {
+        let findTour = post[i].getElementsByTagName('span')[0];
+
+        if (findTour) {
+            let textvalue = findTour.textContent || findTour.innerHTML
+
+            if (textvalue.toLowerCase().indexOf(searchTour) > -1) {
+                post[i].style.display = "";
+            } else {
+                post[i].style.display = "none";
+            }
+        }
+    }
+
+    // search by name 
+
+    for (var i = 0; i < nameTour.length; i++) {
+        let findTour2 = post[i].getElementsByTagName('a')[0];
+
+        if (findTour2) {
+            let textvalue = findTour2.textContent || findTour2.innerHTML
+
+            if (textvalue.toLowerCase().indexOf(searchTour) > -1) {
+                post[i].style.display = "";
+            } else {
+                post[i].style.display = "none";
+            }
+        }
+    }
+
+}
+
+// <<<<<===END===>>>>>
+
 //search suggestions
 let searchable = [
     'Hà Nội',
