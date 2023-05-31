@@ -26,6 +26,19 @@ function myCallback() {
         })
     });
 
+    //Active menu
+    const menuChild = document.getElementById("menu-child");
+    const boxMenu = document.getElementById("box-menu");
+    const boxLogo = document.getElementById("box-logo");
+
+
+    menuChild.addEventListener("click", () => {
+        boxMenu.classList.toggle("active");
+        menuChild.classList.toggle("active");
+        boxLogo.classList.toggle("active");
+    });
+
+
     //Active btn-CTA-search
 
     const ctaSearch = document.getElementById("cta-search");

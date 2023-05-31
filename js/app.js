@@ -20,13 +20,19 @@ window.addEventListener('scroll', function () {
 });
 
 //Active menu
-const boxMenu = document.getElementById("box-menu");
 const menuChild = document.getElementById("menu-child");
+const boxMenu = document.getElementById("box-menu");
+const boxLogo = document.getElementById("box-logo");
+
 
 menuChild.addEventListener("click", () => {
     boxMenu.classList.toggle("active");
     menuChild.classList.toggle("active");
+    boxLogo.classList.toggle("active");
 });
+
+
+
 
 //Active btn-CTA-search
 
@@ -220,8 +226,8 @@ $('.slide-partner').slick({
     slidesToScroll: 1,
     speed: 800,
     dots: false,
-    autoplay: false,
-    arrows: true,
+    autoplay: true,
+    arrows: false,
     prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fa-light fa-chevron-left'></i></button>",
     nextArrow: "<button type='button' class='slick-next pull-right'><i class='fa-light fa-chevron-right'></i></button>",
     responsive: [
