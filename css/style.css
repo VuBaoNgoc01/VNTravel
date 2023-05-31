@@ -27,7 +27,7 @@ img {
     --normal-font: 'Inter', sans-serif;
     --second-font: 'Inter', sans-serif;
     --primary-color: #4366c5;
-    --text-color: #6B7280;
+    --text-color: #adadad;
     --hover-color: #5d85d4;
 }
 
@@ -125,6 +125,7 @@ img {
 
 .box-navbar .wrap-navbar .box-logo {
     height: 36px;
+    display: flex;
 }
 
 .box-navbar .wrap-navbar .box-logo>a {
@@ -205,6 +206,68 @@ img {
 
 .box-navbar .wrap-navbar .box-cta .cta-search.active .fa-magnifying-glass {
     display: none;
+}
+
+
+.box-navbar .wrap-navbar .box-cta .cta-user.active .fa-user {
+    display: none;
+}
+
+.box-navbar .wrap-navbar .box-cta .cta-user .fa-user-xmark {
+    display: none;
+}
+
+.box-navbar .wrap-navbar .box-cta .cta-user.active .fa-user-xmark {
+    display: block;
+}
+
+/* styling menu-child */
+#menu-child {
+    display: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#menu-child .line {
+    display: flex;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-block: 5px;
+}
+
+#menu-child:hover :is(.line) {
+    background-color: var(--primary-color);
+}
+
+#menu-child,
+#menu-child .line {
+    transition: all 0.4s ease-in-out;
+}
+
+#menu-child.active {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+}
+
+#menu-child.active .line:nth-child(2) {
+    width: 0;
+}
+
+#menu-child.active .line:nth-child(1),
+#menu-child.active .line:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+#menu-child.active .line:nth-child(1) {
+    transform: translateY(9px);
+}
+
+#menu-child.active .line:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
 }
 
 /* ---Form--- */
@@ -348,17 +411,25 @@ img {
     padding: 30px;
     border-radius: 12px;
     width: 500px;
+    height: 520px;
     display: none;
     align-items: center;
     justify-content: center;
     transition: all 0.25s linear;
-    border: 2px solid #fff;
-    background-color: #ffffff66;
-    backdrop-filter: blur(20px);
+    border: 2px solid #7ca4de;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px #00000033;
+    transition: all 0.25s linear;
 }
 
 .user-log.active {
     display: flex;
+    transition: all 0.25s linear;
+}
+
+.user-log.change {
+    height: 600px;
+    transition: all 0.25s linear;
 }
 
 .user-log .user-login {
@@ -367,6 +438,34 @@ img {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+}
+
+.user-log.change .user-login.login {
+    transform: translateX(-500px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s linear;
+}
+
+.user-log.change .user-login.register {
+    transform: translateX(0px);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.25s linear;
+}
+
+.user-log .user-login.login {
+    display: flex;
+    transition: all 0.25s linear;
+}
+
+.user-log .user-login.register {
+    position: absolute;
+    visibility: hidden;
+    padding: 30px;
+    opacity: 0;
+    transform: translateX(500px);
+    transition: all 0.25s linear;
 }
 
 .user-log .user-login h2 {
@@ -389,14 +488,47 @@ img {
     position: relative;
 }
 
+.user-log .user-login>form .enter-check {
+    display: flex;
+    align-items: center;
+}
+
+.user-log .user-login>form .enter-check label {
+    font-family: var(--normal-font);
+    font-size: 14px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.user-log .user-login>form .enter-check label input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
 .user-log .user-login>form .enter-name input,
 .user-log .user-login>form .enter-pass input {
     border: none;
     outline: none;
-    border-bottom: 2px solid #344a93;
+    border: 1px solid #344a93;
+    border-radius: 12px;
     padding: 15px 15px;
     width: 100%;
     background-color: transparent;
+    font-size: 18px;
+    font-family: var(--normal-font);
+    color: #333333;
+}
+
+.user-log .user-login>form .enter-name input:focus~label,
+.user-log .user-login>form .enter-pass input:focus~label,
+.user-log .user-login>form .enter-name input:valid~label,
+.user-log .user-login>form .enter-pass input:valid~label {
+    top: 0;
+    left: 25px;
+    font-size: 14px;
+    padding: 0 10px;
+    background-color: #ffffff;
+    transition: all 0.25s linear;
 }
 
 .user-log .user-login>form .enter-name label,
@@ -405,7 +537,10 @@ img {
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
+    font-size: 16px;
+    font-family: var(--normal-font);
     color: #344a93;
+    transition: all 0.25s linear;
 }
 
 .user-log .user-login>form button {
@@ -459,6 +594,21 @@ img {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.user-log .user-login>form .forgot-pass span,
+.user-log .user-login>form .change-log span {
+    font-family: var(--normal-font);
+    font-size: 14px;
+    color: #333333;
+}
+
+.user-log .user-login>form a {
+    font-family: var(--normal-font);
+    font-size: 14px;
+    color: #5d85d4;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 
@@ -1751,6 +1901,24 @@ img {
 }
 
 @media (max-width: 1000px) {
+    #menu-child {
+        display: block;
+        z-index: 999;
+        margin-right: 20px;
+    }
+
+    #menu-child.active .line {
+        background-color: #fff;
+    }
+
+    #menu-child.active:hover .line {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .box-navbar .wrap-navbar .box-menu {
+        display: none;
+    }
+
     .box-home .wrap-home .slider-home .slide-home .title-home h1 {
         font-size: 58px;
         line-height: 58px;

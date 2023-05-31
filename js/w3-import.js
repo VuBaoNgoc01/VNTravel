@@ -46,6 +46,21 @@ function myCallback() {
         formLog.classList.toggle("active");
     });
 
+
+    const changerForm = document.querySelector(".user-log");
+    const registerLink = document.querySelector(".register-link");
+    const loginLink = document.querySelector(".login-link");
+
+
+    registerLink.addEventListener("click", () => {
+        changerForm.classList.add("change");
+    })
+
+    loginLink.addEventListener("click", () => {
+        changerForm.classList.remove("change");
+    })
+
+
     //Active select-blog
 
     var btnBlog = document.getElementsByClassName(('show-select')[0]);
@@ -65,6 +80,20 @@ function myCallback() {
             }
         });
     }
+
+    $('[data-fancybox]').fancybox({
+        loop: true,
+        buttons: [
+            "zoom",
+            "share",
+            "slideshow",
+            "fullscreen",
+            "download",
+            "thumbs",
+            "close"
+        ]
+    });
+
 
 
     //Import Include HTML//

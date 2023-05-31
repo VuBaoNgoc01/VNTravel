@@ -27,6 +27,11 @@
         <nav class="box-navbar" id="box-navbar">
             <div class="wrap wrap-navbar">
                 <div class="box-logo">
+                    <button type="button" id="menu-child">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </button>
                     <a href="./index.html">
                         VN Travel
                     </a>
@@ -36,17 +41,17 @@
                         <ul class="menu">
                             <li>
                                 <a href="./index.html">
-                                    Home
+                                    Trang chủ
                                 </a>
                             </li>
                             <li>
                                 <a href="../view/aboutus.html">
-                                    About Us
+                                    Về chúng tôi
                                 </a>
                             </li>
                             <li>
                                 <a href="../view/destination.html">
-                                    Destinations
+                                    Điểm đến
                                 </a>
                             </li>
                             <li>
@@ -56,15 +61,14 @@
                             </li>
                             <li>
                                 <a href="../view/blog.html">
-                                    Blog
+                                    Bài viết
                                 </a>
                             </li>
                             <li>
                                 <a href="../view/contact.html">
-                                    Contact
+                                    Liên hệ
                                 </a>
                             </li>
-                            <div class="underline-menu"></div>
                         </ul>
                     </div>
                 </div>
@@ -114,15 +118,15 @@
                 </form>
             </div>
             <div class="user-log" id="form-log">
-                <div class="user-login">
+                <div class="user-login login">
                     <h2>Đăng nhập</h2>
                     <form action="">
                         <div class="enter-name">
-                            <input type="text">
+                            <input type="text" required>
                             <label for="">Tài khoản</label>
                         </div>
                         <div class="enter-pass">
-                            <input type="password">
+                            <input type="password" required>
                             <label for="">Mật khẩu</label>
                         </div>
                         <button class="btn-login">
@@ -134,7 +138,39 @@
                         <div class="or">Or</div>
                         <div class="change-log">
                             <span>Bạn chưa có tài khoản?</span>
-                            <a href="">Đăng ký</a>
+                            <a class="register-link">Đăng ký</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="user-login register">
+                    <h2>Đăng ký</h2>
+                    <form action="">
+                        <div class="enter-name">
+                            <input type="text" required>
+                            <label for="">Tên người dùng</label>
+                        </div>
+                        <div class="enter-name">
+                            <input type="text" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="enter-pass">
+                            <input type="password" required>
+                            <label for="">Mật khẩu</label>
+                        </div>
+                        <div class="enter-check">
+                            <label for="check-box">
+                                <input type="checkbox" id="check-box" required>
+                                Tôi đồng ý với điều khoản và sử dụng
+                            </label>
+                        </div>
+                        <button class="btn-login">
+                            Đăng nhập
+                        </button>
+                        <div class="or">Or</div>
+                        <div class="change-log">
+                            <span>Bạn đã có tài khoản?</span>
+                            <a class="login-link">Đăng nhập</a>
                         </div>
                     </form>
                 </div>
@@ -191,7 +227,7 @@
             <div class="wrap wrap-destination">
                 <div class="title-destination">
                     <h3>Địa điểm phổ biến</h3>
-                    <a href="#">
+                    <a href="../view/destination.html">
                         Xem tất cả
                         <i class="fa-solid fa-angle-right"></i>
                     </a>
@@ -410,7 +446,7 @@
             <div class="wrap wrap-tour">
                 <div class="title-tour">
                     <h3>Tour phổ biến</h3>
-                    <a href="#">
+                    <a href="../view/tour.html">
                         Xem tất cả
                         <i class="fa-solid fa-angle-right"></i>
                     </a>
@@ -449,10 +485,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -496,10 +532,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -544,10 +580,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -592,10 +628,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -639,10 +675,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -686,10 +722,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -733,10 +769,10 @@
                             <div class="btn-card-tour">
                                 <div class="price-tour">
                                     <span class="price-old">
-                                        3,000,000 VNĐ
+                                        3,000,000 &#8363
                                     </span>
                                     <span class="price-new">
-                                        2,500,000 VNĐ
+                                        2,500,000 &#8363
                                     </span>
                                 </div>
                                 <button class="btn-view">
@@ -812,7 +848,7 @@
             <div class="wrap wrap-blog">
                 <div class="title-blog">
                     <h3>Bài viết gần đây</h3>
-                    <a href="#">
+                    <a href="../view/blog.html">
                         Xem tất cả
                         <i class="fa-solid fa-angle-right"></i>
                     </a>

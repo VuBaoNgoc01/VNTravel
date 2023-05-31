@@ -23,6 +23,11 @@
 
         <nav class="box-navbar" id="box-navbar">
             <div class="wrap wrap-navbar">
+                <button type="button" id="menu-child">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
                 <div class="box-logo">
                     <a href="./index.html">
                         VN Travel
@@ -33,17 +38,17 @@
                         <ul class="menu">
                             <li>
                                 <a href="./index.html">
-                                    Home
+                                    Trang chủ
                                 </a>
                             </li>
                             <li>
                                 <a href="../view/aboutus.html">
-                                    About Us
+                                    Về chúng tôi
                                 </a>
                             </li>
                             <li>
                                 <a href="../view/destination.html">
-                                    Destinations
+                                    Điểm đến
                                 </a>
                             </li>
                             <li>
@@ -53,12 +58,12 @@
                             </li>
                             <li>
                                 <a href="../view/blog.html">
-                                    Blog
+                                    Bài viết
                                 </a>
                             </li>
                             <li>
                                 <a href="../view/contact.html">
-                                    Contact
+                                    Liên hệ
                                 </a>
                             </li>
                             <div class="underline-menu"></div>
@@ -72,6 +77,7 @@
                     </a>
                     <a class="cta-user" id="cta-user">
                         <i class="fa-light fa-user"></i>
+                        <i class="fa-solid fa-user-xmark"></i>
                     </a>
                 </div>
             </div>
@@ -111,26 +117,59 @@
                 </form>
             </div>
             <div class="user-log" id="form-log">
-                <div class="user-login">
+                <div class="user-login login">
                     <h2>Đăng nhập</h2>
                     <form action="">
                         <div class="enter-name">
-                            <input type="text">
+                            <input type="text" required>
                             <label for="">Tài khoản</label>
                         </div>
                         <div class="enter-pass">
-                            <input type="password">
+                            <input type="password" required>
                             <label for="">Mật khẩu</label>
-                        </div>
-                        <div class="forgot-pass">
-                            <a href="">Quên mật khẩu?</a>
                         </div>
                         <button class="btn-login">
                             Đăng nhập
                         </button>
+                        <div class="forgot-pass">
+                            <a href="">Quên mật khẩu?</a>
+                        </div>
+                        <div class="or">Or</div>
                         <div class="change-log">
                             <span>Bạn chưa có tài khoản?</span>
-                            <a href="">Đăng ký</a>
+                            <a class="register-link">Đăng ký</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="user-login register">
+                    <h2>Đăng ký</h2>
+                    <form action="">
+                        <div class="enter-name">
+                            <input type="text" required>
+                            <label for="">Tên người dùng</label>
+                        </div>
+                        <div class="enter-name">
+                            <input type="text" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="enter-pass">
+                            <input type="password" required>
+                            <label for="">Mật khẩu</label>
+                        </div>
+                        <div class="enter-check">
+                            <label for="check-box">
+                                <input type="checkbox" id="check-box" required>
+                                Tôi đồng ý với điều khoản và sử dụng
+                            </label>
+                        </div>
+                        <button class="btn-login">
+                            Đăng nhập
+                        </button>
+                        <div class="or">Or</div>
+                        <div class="change-log">
+                            <span>Bạn đã có tài khoản?</span>
+                            <a class="login-link">Đăng nhập</a>
                         </div>
                     </form>
                 </div>

@@ -11,12 +11,21 @@ window.addEventListener('scroll', function () {
 
     moutain1.style.marginTop = value * -0.3 + 'px';
     moutain1.style.scale = 1 + value * 0.0002;
-    //person.style.top = value * 0.5 + 'px';
+    person.style.top = value * 0.3 + 'px';
     person.style.left = value * -0.5 + 'px';
-    //person.style.scale = 1 - value * 0.0003;
+    person.style.scale = 1 - value * 0.0003;
     title.style.marginTop = value * 1.3 + 'px';
 
 
+});
+
+//Active menu
+const boxMenu = document.getElementById("box-menu");
+const menuChild = document.getElementById("menu-child");
+
+menuChild.addEventListener("click", () => {
+    boxMenu.classList.toggle("active");
+    menuChild.classList.toggle("active");
 });
 
 //Active btn-CTA-search
@@ -37,7 +46,24 @@ const formLog = document.getElementById("form-log");
 ctaUser.addEventListener("click", () => {
     ctaUser.classList.toggle("active");
     formLog.classList.toggle("active");
+    changerForm.classList.remove("change");
 });
+
+
+const changerForm = document.querySelector(".user-log");
+const registerLink = document.querySelector(".register-link");
+const loginLink = document.querySelector(".login-link");
+
+
+registerLink.addEventListener("click", () => {
+    changerForm.classList.add("change");
+})
+
+loginLink.addEventListener("click", () => {
+    changerForm.classList.remove("change");
+})
+
+
 
 //flatpickr date-time
 
@@ -45,6 +71,7 @@ flatpickr("input[type=date]", {
     minDate: "today",
     maxDate: new Date().fp_incr(30),
 });
+
 
 //Scroll
 

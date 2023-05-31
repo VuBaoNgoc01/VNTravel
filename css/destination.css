@@ -294,6 +294,16 @@
     overflow: hidden;
 }
 
+.box-destinationPage .wrap-destinationPage .list-destination .card-destination .img-card img {
+    transform: scale(1);
+    transition: all 0.25s linear;
+}
+
+.box-destinationPage .wrap-destinationPage .list-destination .card-destination:hover .img-card img {
+    transform: scale(1.2);
+    transition: all 0.25s linear;
+}
+
 .box-destinationPage .wrap-destinationPage .list-destination .card-destination .info-card {
     position: relative;
     display: flex;
