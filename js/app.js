@@ -171,6 +171,14 @@ $('.slide-tour').slick({
             settings: {
                 slidesToShow: 1,
             }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                dots: true,
+            }
         }
     ]
 });
@@ -215,6 +223,14 @@ $('.slide-blog').slick({
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                arrows: false,
+                dots: true,
             }
         }
     ]

@@ -221,7 +221,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 15px 0px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px #00000022;
 }
 
 .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company {
@@ -714,6 +715,7 @@
 .box-about-contact .wrap-about-contact .contact-action .call-action .call-tel i {
     font-size: 35px;
     margin-right: 5px;
+    color: var(--primary-color);
 }
 
 .box-about-contact .wrap-about-contact .contact-action .call-action .call-tel span {
@@ -912,6 +914,25 @@
     }
 }
 
+@media (max-width: 1000px) {
+
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story {
+        height: 400px;
+    }
+
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .content,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .content {
+        padding: 30px;
+    }
+
+    .box-about-company .wrap-about-company .title-about-company h1,
+    .box-about-entrada .wrap-about-entrada .title-about-entrada h1 {
+        font-size: 35px;
+    }
+}
+
 @media (max-width: 850px) {
     .box-about-entrada .wrap-about-entrada .content-about-entrada {
         display: grid;
@@ -925,6 +946,11 @@
 
 @media (max-width: 768px) {
 
+    .box-about-company .wrap-about-company .title-about-company h1,
+    .box-about-entrada .wrap-about-entrada .title-about-entrada h1 {
+        font-size: 30px;
+    }
+
     .box-about-company .wrap-about-company .content-about-company .card-about-company .img-card-about {
         width: 130px;
         height: 130px;
@@ -937,6 +963,31 @@
         align-items: center;
         justify-content: center;
         padding: 15px 0px;
+    }
+
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .content,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .content,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story {
+        width: 100%;
+    }
+
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .content,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .content {
+        padding: 15px;
+    }
+
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
+    .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story {
+        height: 300px;
     }
 
     .box-service-company .wrap-service-company {
