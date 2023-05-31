@@ -117,14 +117,14 @@
 }
 
 .box-detail-tour .wrap-detail-tour .book-detail-tour .title-detail-tour .price-tour .price h3 {
-    color: #474b4d;
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 300;
 }
 
 .box-detail-tour .wrap-detail-tour .book-detail-tour .title-detail-tour .price-tour .price span {
-    color: #474b4d;
-    font-size: 28px;
+    color: var(--primary-color);
+    font-size: 30px;
     font-weight: 700;
 }
 
@@ -230,7 +230,7 @@
     width: 350px;
     border: none;
     border-radius: 8px;
-    background-color: #474b4d;
+    background-color: var(--primary-color);
     font-size: 28px;
     font-weight: 500;
     color: #fff;
@@ -320,7 +320,7 @@
 }
 
 .box-info-detail .nav-info-detail .wrap-tab-info .tab-item:hover span {
-    color: #b0a377;
+    color: #fafafa;
 }
 
 .box-info-detail .nav-info-detail .wrap-tab-info .tab-item.active span {
@@ -387,8 +387,9 @@
 .wrap-info-detail .tab-info-detail .info-detail-left .content-info-detail {
     background-color: #f2f6fc;
     border: 1px solid #f2f6fc;
-    padding: 40px 20px;
+    padding: 30px 20px;
     border-radius: 12px;
+    box-shadow: 0 0 20px #00000022;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .content-info-detail p {
@@ -416,19 +417,21 @@
     flex-direction: column;
     width: 100%;
     gap: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00000022;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .content-info-detail .card-content .text-card {
     position: relative;
     width: 100%;
-    padding: 10px 80px 30px 80px;
+    padding: 30px 80px 30px 80px;
     border: 1px solid #fafafa;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .content-info-detail .card-content .text-card .icon-card {
     position: absolute;
-    top: 5%;
-    left: 2%;
+    top: 10%;
+    left: 3%;
     width: 40px;
     height: 40px;
     display: flex;
@@ -496,6 +499,8 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00000022;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail .icon-card {
@@ -805,6 +810,7 @@
     background-position: center;
     height: 100%;
     width: 100%;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.2s linear;
 }
@@ -839,6 +845,7 @@
 .tab-info-detail .gallery-detail .card-photo-detail .info-photo-detail .wrap-info-photo {
     border: 1px solid #252525;
     width: 100%;
+    border-radius: 12px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -864,11 +871,11 @@
 }
 
 .tab-info-detail table tr:not(:first-child) {
-    border: 1px solid #ececec;
+    border: 1px solid #e1eaf8;
 }
 
 .tab-info-detail table tr:nth-child(even) {
-    background-color: #ececec;
+    background-color: #f2f6fc;
 }
 
 .tab-info-detail table th {
@@ -905,7 +912,7 @@ th {
     z-index: 1;
     position: relative;
     width: 100%;
-    background-color: #6b6957;
+    background-color: var(--primary-color);
     padding: 5px;
     border: none;
     border-radius: 3px;
