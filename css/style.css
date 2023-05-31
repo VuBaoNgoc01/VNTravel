@@ -353,7 +353,7 @@ img {
     justify-content: center;
     transition: all 0.25s linear;
     border: 2px solid #fff;
-    background-color: transparent;
+    background-color: #ffffff66;
     backdrop-filter: blur(20px);
 }
 
@@ -414,11 +414,51 @@ img {
     padding: 15px;
     border-radius: 12px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-top: 15px;
     color: #fff;
     font-size: 18px;
     background-color: #344a93;
     cursor: pointer;
+}
+
+.user-log .user-login>form .forgot-pass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-log .user-login>form .or {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-log .user-login>form .or::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 45%;
+    height: 1px;
+    background-color: #344a93;
+}
+
+.user-log .user-login>form .or::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 45%;
+    height: 1px;
+    background-color: #344a93;
+}
+
+.user-log .user-login>form .change-log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 

@@ -381,7 +381,7 @@
 
 .wrap-info-detail .tab-info-detail .info-detail-left .title-info-detail:hover h3,
 .wrap-info-detail .tab-info-detail .info-detail-right .title-info-detail:hover h3 {
-    color: #b0a377;
+    color: var(--hover-color);
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .content-info-detail {
@@ -511,27 +511,41 @@
     align-items: center;
     justify-content: center;
     margin: 10px 50px 0px 0px;
-    padding: 15px;
-    border: 2px solid #adadad;
+    padding: 20px;
+    border-radius: 20px 15px 30px 20px;
+    border: 2px solid #a6c3ea;
     transform: rotate(45deg);
+    transition: all 0.25s linear;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail:hover .icon-card {
-    border: 2px solid #1f2933;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px 10px 10px 10px;
+    transform: rotate(0deg);
+    transition: all 0.25s linear;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail:hover .icon-card span {
-    color: #1f2933;
+    color: var(--hover-color);
+    transition: all 0.25s linear;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail:hover .text-card-info :is(h3, span) {
-    color: #b0a377;
+    color: var(--hover-color);
+    transition: all 0.25s linear;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail .icon-card span {
     font-size: 18px;
     color: #adadad;
     transform: rotate(-45deg);
+}
+
+.wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail:hover .icon-card span {
+    font-size: 18px;
+    color: var(--hover-color);
+    transform: rotate(0deg);
+    transition: all 0.25s linear;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-left .card-info-detail .text-card-info {
@@ -868,6 +882,10 @@
 .tab-info-detail table {
     border-collapse: collapse;
     width: 100%;
+}
+
+.tab-info-detail table tr {
+    border-radius: 12px;
 }
 
 .tab-info-detail table tr:not(:first-child) {
