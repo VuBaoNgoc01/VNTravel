@@ -1732,6 +1732,11 @@ img {
     right: -35px;
 }
 
+.slick-prev:active,
+.slick-next:active {
+    transform: scale(0.9);
+}
+
 
 /* Styling section partner */
 
@@ -1969,12 +1974,24 @@ img {
     }
 
     /* <<<Slick-arrow>>> */
+    .slick-arrow {
+        top: 45%;
+    }
+
     .slick-prev {
         left: 0px;
+        background-color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 5px 0px 10px #00000033;
     }
 
     .slick-next {
         right: 0px;
+        background-color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: -5px 0px 10px #00000033;
     }
 
     /* <<<Section>>> */
