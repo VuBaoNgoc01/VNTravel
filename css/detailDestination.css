@@ -95,3 +95,7 @@
     font-family: var(--normal-font);
     color: var(--hover-color);
 }
+
+.box-page-blog .wrap-page-blog .select-blog .nav-select-blog {
+    border-radius: 12px !important;
+}

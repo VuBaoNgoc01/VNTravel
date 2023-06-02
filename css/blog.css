@@ -477,11 +477,10 @@
 
 .box-page-blog .wrap-page-blog .select-blog .nav-select-blog .nav-blog>li .drop-nav-blog {
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
     display: none;
     height: 0;
     border-radius: 0 0 8px 8px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease-in-out;
 }
 
