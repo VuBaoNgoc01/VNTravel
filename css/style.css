@@ -1843,7 +1843,8 @@ img {
 .box-footer .wrap-footer .logo-company {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 30%;
 }
 
 .box-footer .wrap-footer .logo-company a {
