@@ -149,7 +149,7 @@
     flex-direction: column;
     gap: 15px;
     background-color: #f2f6fc;
-    border: 10px solid #7ca4de;
+    border: 10px solid #a6c3ea;
     border-radius: 12px;
     padding: 60px 30px;
     box-shadow: 0 10px 20px #00000022;
@@ -243,7 +243,7 @@
 
 .box-contact .wrap-contact .how-contact .add-contact {
     width: 50%;
-    height: 630px;
+    height: 580px;
     display: flex;
     align-items: center;
     justify-content: center;
