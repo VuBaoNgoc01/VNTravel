@@ -19,6 +19,22 @@
     width: 100%;
 }
 
+.box-tourPage .wrap-tourPage .btn-boxFilter {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box-tourPage .wrap-tourPage .btn-boxFilter:active {
+    transform: scale(0.9);
+}
+
+.box-tourPage .wrap-tourPage .btn-boxFilter i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
 .box-tourPage .wrap-tourPage .search-tour {
     position: sticky;
     top: 100px;
@@ -164,6 +180,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 15px;
+    border-bottom: 1px solid #a6c3ea;
 }
 
 .box-tourPage .wrap-tourPage .list-tour .title-list-tour h2 {
@@ -173,7 +191,6 @@
     width: 100%;
     text-align: left;
     padding-bottom: 15px;
-    border-bottom: 1px solid #a6c3ea;
 }
 
 .box-tourPage .wrap-tourPage .list-tour .grid-filter {
@@ -573,6 +590,24 @@
 
 
 @media (max-width: 1000px) {
+    .box-tourPage .wrap-tourPage .btn-boxFilter {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .box-tourPage .wrap-tourPage .btn-boxFilter.open .fa-light.fa-filter-list {
+        display: none;
+    }
+
+    .box-tourPage .wrap-tourPage .btn-boxFilter .fa-solid.fa-filter-list {
+        display: none;
+    }
+
+    .box-tourPage .wrap-tourPage .btn-boxFilter.open .fa-solid.fa-filter-list {
+        display: block;
+    }
+
+
     .box-tourPage .wrap-tourPage {
         flex-direction: column;
     }
@@ -581,6 +616,21 @@
         position: relative;
         width: 100%;
         top: 0;
+        height: 0;
+        margin-top: -50px;
+        opacity: 0;
+        visibility: hidden;
+        transform: rotateX(90deg);
+        transition: all 0.1s linear;
+    }
+
+    .box-tourPage .wrap-tourPage .search-tour.open {
+        height: 100%;
+        margin-top: 0px;
+        opacity: 1;
+        visibility: visible;
+        transform: rotateX(0deg);
+        transition: all 0.25s linear;
     }
 
     .box-tourPage .wrap-tourPage .search-tour .search-btnName,
@@ -674,5 +724,10 @@
 @media (max-width: 500px) {
     .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card .info-book .btn-book {
         width: 50%;
+    }
+
+    .box-tourPage .wrap-tourPage .search-tour .search-btnName,
+    .box-tourPage .wrap-tourPage .search-tour .search-btnPrice {
+        grid-template-columns: 50% 50%;
     }
 }

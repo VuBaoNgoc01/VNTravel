@@ -218,7 +218,7 @@ img {
 
 .box-navbar .wrap-navbar .box-logo.active~.box-cta {
     position: absolute;
-    right: 40px;
+    right: 15px;
 }
 
 .box-navbar .wrap-navbar .box-menu.active {
