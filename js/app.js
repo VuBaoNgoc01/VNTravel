@@ -76,6 +76,7 @@ loginLink.addEventListener("click", () => {
 flatpickr("input[type=date]", {
     minDate: "today",
     maxDate: new Date().fp_incr(30),
+    allowInput: true,
 });
 
 
@@ -116,8 +117,9 @@ const sr = ScrollReveal({
     reset: true,
 })
 
-sr.reveal('#person', { delay: 250, origin: 'left' });
-sr.reveal('#title', { delay: 250, origin: 'top' });
+sr.reveal('#person', { delay: 50, origin: 'left' });
+sr.reveal('#title', { delay: 50, origin: 'top' });
+sr.reveal('#wrap-form', { delay: 50, origin: 'top' });
 
 // <<<>>>
 

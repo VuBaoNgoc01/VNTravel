@@ -9,6 +9,19 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 36px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #e1eaf8;
+}
+
 li {
     list-style: none;
 }
@@ -340,37 +353,35 @@ img {
 
 /* ---Form--- */
 .wrap-form {
-    position: fixed;
+    position: absolute;
     z-index: 10;
-    top: 120%;
-    right: 0;
-    width: 0;
+    bottom: 2%;
+    left: 50%;
+    width: 100%;
+    padding: 30px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateX(-50%) rotateX(90deg) !important;
     border-radius: 12px;
     overflow: hidden;
-    transform: rotate3d(3, 1, 1, 0);
-    box-shadow: 0 0 20px #00000066;
-    transition: all 0.25s linear;
 }
 
 .wrap-form.active {
-    opacity: 1;
-    visibility: visible;
-    width: 50vh;
-    transform: rotate3d(1, 1, 1, 0);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) rotateX(0deg) !important;
     transition: all 0.25s linear;
 }
 
 .wrap-form form {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--primary-color);
+    background-color: #4366c566;
+    box-shadow: 0 0 20px #00000099;
     padding: 30px;
     gap: 30px;
     width: 100%;
@@ -379,7 +390,7 @@ img {
 
 .wrap-form form .location,
 .wrap-form form .depature,
-.wrap-form form .adult,
+.wrap-form form .people,
 .wrap-form form .children {
     position: relative;
     display: flex;
@@ -426,18 +437,17 @@ img {
     border: 1px solid #fff;
     outline: none;
     border-radius: 36px;
-    width: 100%;
+    width: 60%;
     margin-top: 33px;
     color: #fff;
     font-size: 18px;
     background-color: var(--primary-color);
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.25s linear;
 }
 
 .wrap-form form button:hover {
-    color: var(--primary-color);
+    color: #fff;
     box-shadow: 0 5px 20px #00000066;
     transition: all 0.25s linear;
 }
@@ -455,7 +465,7 @@ img {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #fff;
+    background-color: var(--hover-color);
     transition: all 0.25s linear;
 }
 
@@ -465,7 +475,7 @@ img {
 }
 
 .flatpickr-calendar.open {
-    z-index: 999 !important;
+    z-index: 998 !important;
 }
 
 /* ---CTA-User--- */
@@ -2136,6 +2146,37 @@ img {
         line-height: 58px;
     }
 
+    /* <<<Form Search>>> */
+
+    .wrap-form form {
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+        padding: 30px 15px;
+    }
+
+    .wrap-form form .location,
+    .wrap-form form .depature,
+    .wrap-form form .people,
+    .wrap-form form .children {
+        gap: 5px;
+    }
+
+    .wrap-form form label {
+        font-size: 14px;
+    }
+
+    .wrap-form form select,
+    .wrap-form form input,
+    .wrap-form form button {
+        padding: 8px 16px;
+    }
+
+    .wrap-form form button {
+        margin-top: 15px;
+        width: 100%;
+    }
+
     /* <<<Slick-slide>>> */
     .box-tour .wrap-tour .list-tour .slick-slide {
         margin: 0 15px;
@@ -2191,11 +2232,18 @@ img {
     }
 
     .wrap-form.active {
-        width: 45vh;
+        width: 100%;
     }
 
     .user-log {
         width: 70%;
+    }
+
+    .wrap-form form {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 30px 15px;
     }
 
     /* <<<Title>>> */
@@ -2307,9 +2355,6 @@ img {
 @media (max-width: 500px) {
 
     /* <<<Active>>> */
-    .wrap-form.active {
-        width: 35vh;
-    }
 
     .user-log {
         width: 90%;

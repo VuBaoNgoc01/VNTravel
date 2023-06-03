@@ -86,41 +86,6 @@
                     </a>
                 </div>
             </div>
-            <div class="wrap-form" id="wrap-form">
-                <form action="" class="wrap">
-                    <div class="location">
-                        <label for="">Địa điểm</label>
-                        <select name="" id="">
-                            <option value="0">Địa điểm</option>
-                            <option value="1">Hà Nội</option>
-                            <option value="2">Ninh Bình</option>
-                            <option value="3">Hội An</option>
-                            <option value="4">Huế</option>
-                            <option value="5">Sapa</option>
-                            <option value="6">Nha Trang</option>
-                        </select>
-                    </div>
-                    <div class="depature">
-                        <label for="">
-                            Ngày khởi hành
-                        </label>
-                        <input type="date" placeholder="Ngày khởi hành">
-                    </div>
-                    <div class="adult">
-                        <label for="">Người lớn</label>
-                        <input type="text" placeholder="0 người lớn">
-                    </div>
-                    <div class="children">
-                        <label for="">
-                            Trẻ nhỏ
-                        </label>
-                        <input type="text" placeholder="0 Trẻ nhỏ">
-                    </div>
-                    <button class="btn-search">
-                        Tìm kiếm
-                    </button>
-                </form>
-            </div>
             <div class="user-log" id="form-log">
                 <div class="user-login login">
                     <h2>Đăng nhập</h2>
@@ -222,6 +187,35 @@
                     Travel
                 </span>
                 <h1>Viet Nam</h1>
+            </div>
+            <div class="wrap-form" id="wrap-form">
+                <form action="" class="wrap">
+                    <div class="location">
+                        <label for="add">Địa điểm</label>
+                        <select name="add" id="add" required>
+                            <option value="0">Địa điểm</option>
+                            <option value="1">Hà Nội</option>
+                            <option value="2">Ninh Bình</option>
+                            <option value="3">Hội An</option>
+                            <option value="4">Huế</option>
+                            <option value="5">Sapa</option>
+                            <option value="6">Nha Trang</option>
+                        </select>
+                    </div>
+                    <div class="depature">
+                        <label for="depature">
+                            Ngày khởi hành
+                        </label>
+                        <input type="date" id="depature" placeholder="Ngày khởi hành" required>
+                    </div>
+                    <div class="people">
+                        <label for="pax">Số người</label>
+                        <input type="text" id="pax" placeholder="0" required>
+                    </div>
+                    <button type="submit" class="btn-search">
+                        Tìm kiếm
+                    </button>
+                </form>
             </div>
         </section>
 
