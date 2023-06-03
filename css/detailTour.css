@@ -21,8 +21,11 @@
 }
 
 .box-navbar .wrap-navbar .box-logo>a {
-    color: var(--primary-color) !important;
     transition: all 0.25s linear;
+}
+
+.box-navbar .wrap-navbar .box-logo>a>img {
+    filter: invert(36%) sepia(10%) saturate(5770%) hue-rotate(196deg) brightness(97%) contrast(85%);
 }
 
 .box-navbar .wrap-navbar .box-menu .wrap-menu .menu li a {
@@ -379,11 +382,6 @@
     color: #474b4d;
 }
 
-.wrap-info-detail .tab-info-detail .info-detail-left .title-info-detail:hover h3,
-.wrap-info-detail .tab-info-detail .info-detail-right .title-info-detail:hover h3 {
-    color: var(--hover-color);
-}
-
 .wrap-info-detail .tab-info-detail .info-detail-left .content-info-detail {
     background-color: #f2f6fc;
     border: 1px solid #f2f6fc;
@@ -718,7 +716,7 @@
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .form-cmt .user-review .user-info:hover h3 {
-    color: #b0a377;
+    color: var(--hover-color);
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .form-cmt .user-review .user-info span {
@@ -767,11 +765,9 @@
     outline: none;
     font-size: 14px;
     color: #5c5e62;
+    border-radius: 8px;
     width: 47%;
-}
-
-.wrap-info-detail .tab-info-detail .info-detail-right .form-cmt form .form-input :is(input, textarea):focus {
-    border: 1px solid #dedede;
+    border: 1px solid transparent;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .form-cmt form .form-input textarea {
@@ -780,7 +776,18 @@
     outline: none;
     font-size: 14px;
     color: #5c5e62;
+    border-radius: 8px;
     width: 100%;
+    resize: none;
+    border: 1px solid transparent;
+}
+
+.wrap-info-detail .tab-info-detail .info-detail-right .form-cmt form .form-input :is(input, textarea):hover {
+    border: 1px solid #cadaf3;
+}
+
+.wrap-info-detail .tab-info-detail .info-detail-right .form-cmt form .form-input :is(input, textarea):focus {
+    border: 1px solid #7ca4de;
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .form-cmt form .form-input button {
@@ -790,7 +797,8 @@
     font-size: 18px;
     font-weight: 600;
     color: #fff;
-    background-color: #6b6957;
+    background-color: var(--primary-color);
+    border-radius: 8px;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -799,7 +807,7 @@
 }
 
 .wrap-info-detail .tab-info-detail .info-detail-right .form-cmt form .form-input button:hover {
-    box-shadow: inset -16em 0 0 0 #b0a377, inset 16em 0 0 0 #b0a377;
+    box-shadow: inset -18em 0 0 0 #7ca4de, inset 18em 0 0 0 #7ca4de;
 }
 
 /* Styling Tab-UI-5 */
@@ -948,7 +956,7 @@ th {
     left: 0;
     height: 0;
     width: 100%;
-    background-color: #b0a377;
+    background-color: var(--hover-color);
     border-radius: 3px;
     transition: all 0.3s linear;
 }

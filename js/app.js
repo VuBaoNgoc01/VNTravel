@@ -103,6 +103,24 @@ $(document).ready(function () {
     })
 });
 
+//Animation load
+
+AOS.init();
+
+//Scroll reveal
+
+const sr = ScrollReveal({
+    distance: '80px',
+    duration: 2500,
+    delay: 300,
+    reset: true,
+})
+
+sr.reveal('#person', { delay: 250, origin: 'left' });
+sr.reveal('#title', { delay: 250, origin: 'top' });
+
+// <<<>>>
+
 $('.slider-home').slick({
     infinite: true,
     speed: 500,

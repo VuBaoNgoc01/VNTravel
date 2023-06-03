@@ -368,28 +368,3 @@
     font-size: 16px;
     color: var(--primary-color);
 }
-
-.box-destinationPage .wrap-destinationPage .list-destination .card-destination .people {
-    position: absolute;
-    top: 46%;
-    right: 0;
-    background-color: #fff;
-    padding: 15px 25px 15px 15px;
-    border-radius: 12px 12px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.box-destinationPage .wrap-destinationPage .list-destination .card-destination .people i {
-    font-size: 18px;
-    color: var(--primary-color);
-}
-
-.box-destinationPage .wrap-destinationPage .list-destination .card-destination .people span {
-    font-size: 16px;
-    font-family: var(--normal-font);
-    font-weight: 500;
-    color: var(--primary-color);
-}

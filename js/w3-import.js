@@ -107,6 +107,19 @@ function myCallback() {
         ]
     });
 
+    //Animation load
+
+    AOS.init();
+
+    //Scroll reveal
+
+    const sr = ScrollReveal({
+        distance: '80px',
+        duration: 2500,
+        delay: 300,
+        reset: true,
+    })
+
 
 
     //Import Include HTML//
