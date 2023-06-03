@@ -468,18 +468,19 @@
     position: relative;
 }
 
-.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card .title-card ::after {
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card>.info-book ::after {
     content: '';
     position: absolute;
-    top: -55px;
-    right: -5px;
-    height: 275px;
+    top: -50px;
+    left: -15px;
+    height: 270px;
     width: 1px;
     background-color: #dedede;
 }
 
 .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card .info-book {
     width: 30%;
+    position: relative;
 }
 
 .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card .info-book .eval-tour {
@@ -492,4 +493,61 @@
 .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card .info-book .eval-tour .price-tour {
     align-items: center;
     justify-content: center;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people {
+    position: absolute;
+    top: 38%;
+    right: 5px;
+    background-color: #fff;
+    padding: 10px 25px 10px 10px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people span {
+    font-size: 16px;
+    font-family: var(--normal-font);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people {
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+    margin-left: 10px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people i {
+    font-size: 16px;
+    color: #333333;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people span {
+    font-size: 14px;
+    font-family: var(--normal-font);
+    font-weight: 400;
+    color: #333333;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people span::before {
+    content: 'Số người: ';
+    font-size: 14px;
+    font-family: var(--normal-font);
+    color: #333333;
 }
