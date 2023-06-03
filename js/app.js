@@ -46,28 +46,28 @@ ctaSearch.addEventListener("click", () => {
 
 //Active btn-CTA-Userlog
 
-const ctaUser = document.getElementById("cta-user");
-const formLog = document.getElementById("form-log");
+// const ctaUser = document.getElementById("cta-user");
+// const formLog = document.getElementById("form-log");
 
-ctaUser.addEventListener("click", () => {
-    ctaUser.classList.toggle("active");
-    formLog.classList.toggle("active");
-    changerForm.classList.remove("change");
-});
-
-
-const changerForm = document.querySelector(".user-log");
-const registerLink = document.querySelector(".register-link");
-const loginLink = document.querySelector(".login-link");
+// ctaUser.addEventListener("click", () => {
+//     ctaUser.classList.toggle("active");
+//     formLog.classList.toggle("active");
+//     changerForm.classList.remove("change");
+// });
 
 
-registerLink.addEventListener("click", () => {
-    changerForm.classList.add("change");
-})
+// const changerForm = document.querySelector(".user-log");
+// const registerLink = document.querySelector(".register-link");
+// const loginLink = document.querySelector(".login-link");
 
-loginLink.addEventListener("click", () => {
-    changerForm.classList.remove("change");
-})
+
+// registerLink.addEventListener("click", () => {
+//     changerForm.classList.add("change");
+// })
+
+// loginLink.addEventListener("click", () => {
+//     changerForm.classList.remove("change");
+// })
 
 
 
@@ -123,16 +123,6 @@ sr.reveal('#wrap-form', { delay: 50, origin: 'top' });
 
 // <<<>>>
 
-document.getElementById('readUrl').addEventListener('change', function () {
-    if (this.files[0]) {
-        var picture = new FileReader();
-        picture.readAsDataURL(this.files[0]);
-        picture.addEventListener('load', function (event) {
-            document.getElementById('uploadedImage').setAttribute('src', event.target.result);
-            document.getElementById('uploadedImage').style.display = 'block';
-        });
-    }
-});
 
 $('.slider-home').slick({
     infinite: true,

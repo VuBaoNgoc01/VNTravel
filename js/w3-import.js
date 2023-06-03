@@ -49,29 +49,29 @@ function myCallback() {
         formSearch.classList.toggle("active");
     });
 
-    //Active btn-CTA-Userlog
+    // //Active btn-CTA-Userlog
 
-    const ctaUser = document.getElementById("cta-user");
-    const formLog = document.getElementById("form-log");
+    // const ctaUser = document.getElementById("cta-user");
+    // const formLog = document.getElementById("form-log");
 
-    ctaUser.addEventListener("click", () => {
-        ctaUser.classList.toggle("active");
-        formLog.classList.toggle("active");
-    });
-
-
-    const changerForm = document.querySelector(".user-log");
-    const registerLink = document.querySelector(".register-link");
-    const loginLink = document.querySelector(".login-link");
+    // ctaUser.addEventListener("click", () => {
+    //     ctaUser.classList.toggle("active");
+    //     formLog.classList.toggle("active");
+    // });
 
 
-    registerLink.addEventListener("click", () => {
-        changerForm.classList.add("change");
-    })
+    // const changerForm = document.querySelector(".user-log");
+    // const registerLink = document.querySelector(".register-link");
+    // const loginLink = document.querySelector(".login-link");
 
-    loginLink.addEventListener("click", () => {
-        changerForm.classList.remove("change");
-    })
+
+    // registerLink.addEventListener("click", () => {
+    //     changerForm.classList.add("change");
+    // })
+
+    // loginLink.addEventListener("click", () => {
+    //     changerForm.classList.remove("change");
+    // })
 
 
     //Active select-blog
