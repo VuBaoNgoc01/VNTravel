@@ -43,7 +43,7 @@
     justify-content: center;
     flex-direction: column;
     width: 40%;
-    padding: 30px 0;
+    padding: 0;
 }
 
 .box-destinationPage .wrap-destinationPage .search-input input {
@@ -108,9 +108,22 @@
 }
 
 .box-destinationPage .wrap-destinationPage .search-change {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    background-color: #cadaf3;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px #00000022;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .list-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
@@ -119,7 +132,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    padding: 30px 0;
+    padding: 0;
     gap: 30px;
 }
 
@@ -167,6 +180,23 @@
     height: 3px;
     width: 100%;
     background-color: var(--primary-color);
+    transition: all 0.25s linear;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .btn-boxSearch {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .btn-boxSearch i {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.box-destinationPage .wrap-destinationPage .search-change .btn-boxSearch:active {
+    transform: scale(0.9);
     transition: all 0.25s linear;
 }
 
@@ -315,11 +345,16 @@
 }
 
 .box-destinationPage .wrap-destinationPage .list-destination .card-destination .info-card h3 {
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
     margin-bottom: 10px;
     width: 100%;
     font-family: var(--normal-font);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 .box-destinationPage .wrap-destinationPage .list-destination .card-destination .info-card h3>a {
@@ -330,7 +365,7 @@
     font-family: var(--normal-font);
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
@@ -341,7 +376,7 @@
     justify-content: flex-start;
     gap: 8px;
     font-family: var(--normal-font);
-    font-size: 16px;
+    font-size: 14px;
     color: #555555;
     text-align: left;
     width: 100%;
@@ -350,7 +385,7 @@
 
 .box-destinationPage .wrap-destinationPage .list-destination .card-destination .info-card p {
     font-family: var(--normal-font);
-    font-size: 16px;
+    font-size: 14px;
     color: #555555;
     text-align: left;
     overflow: hidden;
@@ -367,4 +402,146 @@
     width: 100%;
     font-size: 16px;
     color: var(--primary-color);
+}
+
+/* <<<==Reponsive==>>> */
+
+@media (max-width: 1200px) {
+
+    /* <<<Active box search>>> */
+    .box-destinationPage .wrap-destinationPage .search-change .btn-boxSearch {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change .grid-filter {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change {
+        padding: 0;
+        gap: 30px;
+        align-items: flex-start;
+        border-radius: 12px;
+        padding: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 20px #00000022;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change .list-search {
+        transform: rotateX(90deg);
+        opacity: 0;
+        visibility: hidden;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0;
+        margin-top: -50px;
+        width: 100%;
+        transition: all 0.15s linear;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change.open {
+        margin-bottom: 30px;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change.open .list-search {
+        transform: rotateX(0deg);
+        opacity: 1;
+        visibility: visible;
+        gap: 15px;
+        margin-top: 45px;
+        transition: all 0.25s linear;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change .btn-filter {
+        padding: 0;
+        gap: 15px;
+        justify-content: center;
+    }
+
+
+    .box-destinationPage .wrap-destinationPage .search-input {
+        padding: 0;
+        width: 100%;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-input input {
+        padding: 10px 15px;
+    }
+
+    /* <<<Filter grid>>> */
+    .box-destinationPage .wrap-destinationPage .list-destination.active .card-destination .img-card {
+        width: 40%;
+    }
+
+    .box-destinationPage .wrap-destinationPage .list-destination.active .card-destination .info-card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .box-destinationPage .wrap-destinationPage .list-destination {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box-destinationPage .wrap-destinationPage .list-destination {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-destinationPage .wrap-destinationPage .list-destination .card-destination {
+        max-width: 100%;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-change .btn-filter {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box-destinationPage .wrap-destinationPage .search-input input {
+        width: 100%;
+    }
+
+    /* <<<Filter grid>>> */
+    .box-destinationPage .wrap-destinationPage .list-destination.active .card-destination {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box-destinationPage .wrap-destinationPage .list-destination.active .card-destination .img-card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .box-destinationPage .wrap-destinationPage .list-destination.active .card-destination .info-card {
+        width: 100%;
+    }
+
+    .box-destinationPage .wrap-destinationPage .list-destination .card-destination .info-card p {
+        margin-bottom: 45px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .box-destinationPage .wrap-destinationPage .search-change .list-search {
+        margin-top: -99px;
+        transition: all 0.15s linear;
+    }
+
+}
+
+@media (max-width: 368px) {
+    .box-destinationPage .wrap-destinationPage .search-change .list-search {
+        margin-top: -150px;
+        transition: all 0.15s linear;
+    }
 }

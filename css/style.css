@@ -147,7 +147,7 @@ img {
     font-weight: 600;
     font-size: 28px;
     display: inline-block;
-    width: 100%;
+    width: auto;
     height: 20px;
     transition: all 0.25s linear;
 }

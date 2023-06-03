@@ -83,6 +83,15 @@ btnGrid.addEventListener("click", () => {
     filterChange.classList.toggle("active");
 });
 
+//Active menu search 
+const btnBoxSearch = document.getElementById("btn-boxSearch");
+const boxSearch = document.getElementById("search-change");
+
+btnBoxSearch.addEventListener("click", () => {
+    btnBoxSearch.classList.toggle("open");
+    boxSearch.classList.toggle("open");
+});
+
 // <<<<<===END===>>>>>
 
 //Search Input
@@ -220,5 +229,6 @@ function renderResults(results) {
 }
 
 // <<<<<===END===>>>>>
+
 
 
