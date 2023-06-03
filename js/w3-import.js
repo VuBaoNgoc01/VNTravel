@@ -51,13 +51,13 @@ function myCallback() {
 
     // //Active btn-CTA-Userlog
 
-    // const ctaUser = document.getElementById("cta-user");
-    // const formLog = document.getElementById("form-log");
+    const ctaUser = document.getElementById("cta-user");
+    const formLog = document.getElementById("form-log");
 
-    // ctaUser.addEventListener("click", () => {
-    //     ctaUser.classList.toggle("active");
-    //     formLog.classList.toggle("active");
-    // });
+    ctaUser.addEventListener("click", () => {
+        ctaUser.classList.toggle("active");
+        formLog.classList.toggle("active");
+    });
 
 
     // const changerForm = document.querySelector(".user-log");

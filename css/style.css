@@ -259,27 +259,26 @@ img {
 /* <<<>>> */
 
 .box-navbar .wrap-navbar .box-cta {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
-.box-navbar .wrap-navbar .box-cta a {
+.box-navbar .wrap-navbar .box-cta>a {
     color: #fff;
     transition: all 0.25s linear;
     cursor: pointer;
 }
 
-.box-navbar .wrap-navbar .box-cta a i {
+.box-navbar .wrap-navbar .box-cta>a>i {
     font-size: 24px;
 }
 
 .box-navbar .wrap-navbar .box-cta .cta-search .fa-magnifying-glass-location {
     display: none;
 }
-
-
 
 .box-navbar .wrap-navbar .box-cta .cta-search.active .fa-magnifying-glass-location {
     display: inline-block;
@@ -289,18 +288,11 @@ img {
     display: none;
 }
 
-
-.box-navbar .wrap-navbar .box-cta .cta-user.active .fa-user {
-    display: none;
+.box-navbar .wrap-navbar .box-cta .cta-user.active>i {
+    font-weight: 600;
 }
 
-.box-navbar .wrap-navbar .box-cta .cta-user .fa-user-xmark {
-    display: none;
-}
 
-.box-navbar .wrap-navbar .box-cta .cta-user.active .fa-user-xmark {
-    display: block;
-}
 
 /* styling menu-child */
 #menu-child {
@@ -481,214 +473,59 @@ img {
 /* ---CTA-User--- */
 
 .user-log {
-    position: fixed;
+    position: absolute;
     z-index: 10;
-    top: 50vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px;
+    top: 120%;
+    right: 0%;
+    width: 230px;
+    padding: 15px;
     border-radius: 12px;
-    width: 500px;
-    height: 520px;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.25s linear;
-    border: 2px solid #7ca4de;
-    background-color: #ffffff;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateX(90deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    border: none;
+    background: linear-gradient(45deg, #5d85d4, #3f59b6);
     box-shadow: 0 10px 20px #00000033;
     transition: all 0.25s linear;
 }
 
 .user-log.active {
-    display: flex;
-    transition: all 0.25s linear;
-}
-
-.user-log.change {
-    height: 600px;
-    transition: all 0.25s linear;
-}
-
-.user-log .user-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.user-log.change .user-login.login {
-    transform: translateX(-500px);
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.25s linear;
-}
-
-.user-log.change .user-login.register {
-    transform: translateX(0px);
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
+    transform: rotateX(0deg);
+    transform-style: preserve-3d;
+    transform-origin: top center;
     transition: all 0.25s linear;
 }
 
-.user-log .user-login.login {
-    display: flex;
-    transition: all 0.25s linear;
-}
-
-.user-log .user-login.register {
-    position: absolute;
-    visibility: hidden;
-    padding: 30px;
-    opacity: 0;
-    transform: translateX(500px);
-    transition: all 0.25s linear;
-}
-
-.user-log .user-login h2 {
-    font-size: 35px;
-    color: #344a93;
-    font-family: var(--normal-font);
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.user-log .user-login>form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.user-log .user-login>form .enter-name,
-.user-log .user-login>form .enter-pass {
-    position: relative;
-}
-
-.user-log .user-login>form .enter-check {
+.user-log .user {
     display: flex;
     align-items: center;
-}
-
-.user-log .user-login>form .enter-check label {
-    font-family: var(--normal-font);
-    font-size: 14px;
-    color: #333333;
-    cursor: pointer;
-}
-
-.user-log .user-login>form .enter-check label input[type="checkbox"] {
-    cursor: pointer;
-}
-
-
-.user-log .user-login>form .enter-name input,
-.user-log .user-login>form .enter-pass input {
-    border: none;
-    outline: none;
-    border: 1px solid #344a93;
-    border-radius: 12px;
-    padding: 15px 15px;
+    justify-content: flex-start;
     width: 100%;
-    background-color: transparent;
-    font-size: 18px;
+}
+
+.user-log .user a {
+    display: inline-block;
+    width: 100%;
     font-family: var(--normal-font);
-    color: #333333;
-}
-
-.user-log .user-login>form .enter-name input:focus~label,
-.user-log .user-login>form .enter-pass input:focus~label,
-.user-log .user-login>form .enter-name input:valid~label,
-.user-log .user-login>form .enter-pass input:valid~label {
-    top: 0;
-    left: 25px;
-    font-size: 14px;
-    padding: 0 10px;
-    background-color: #ffffff;
-    transition: all 0.25s linear;
-}
-
-.user-log .user-login>form .enter-name label,
-.user-log .user-login>form .enter-pass label {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
     font-size: 16px;
-    font-family: var(--normal-font);
-    color: #344a93;
-    transition: all 0.25s linear;
-}
-
-.user-log .user-login>form button {
-    border: none;
-    outline: none;
-    padding: 15px;
-    border-radius: 12px;
-    width: 100%;
-    margin-top: 15px;
-    color: #fff;
-    font-size: 18px;
-    background-color: #344a93;
+    color: #fafafa;
+    padding: 10px 10px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-.user-log .user-login>form .forgot-pass {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.user-log .user a:hover {
+    background-color: #7ca4de;
 }
-
-.user-log .user-login>form .or {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.user-log .user-login>form .or::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 45%;
-    height: 1px;
-    background-color: #344a93;
-}
-
-.user-log .user-login>form .or::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 45%;
-    height: 1px;
-    background-color: #344a93;
-}
-
-.user-log .user-login>form .change-log {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.user-log .user-login>form .forgot-pass span,
-.user-log .user-login>form .change-log span {
-    font-family: var(--normal-font);
-    font-size: 14px;
-    color: #333333;
-}
-
-.user-log .user-login>form a {
-    font-family: var(--normal-font);
-    font-size: 14px;
-    color: #5d85d4;
-    font-weight: 500;
-    cursor: pointer;
-}
-
 
 
 /* Scroll menu */

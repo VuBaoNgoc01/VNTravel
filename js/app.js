@@ -46,14 +46,14 @@ ctaSearch.addEventListener("click", () => {
 
 //Active btn-CTA-Userlog
 
-// const ctaUser = document.getElementById("cta-user");
-// const formLog = document.getElementById("form-log");
+const ctaUser = document.getElementById("cta-user");
+const formLog = document.getElementById("form-log");
 
-// ctaUser.addEventListener("click", () => {
-//     ctaUser.classList.toggle("active");
-//     formLog.classList.toggle("active");
-//     changerForm.classList.remove("change");
-// });
+ctaUser.addEventListener("click", () => {
+    ctaUser.classList.toggle("active");
+    formLog.classList.toggle("active");
+    changerForm.classList.remove("change");
+});
 
 
 // const changerForm = document.querySelector(".user-log");
