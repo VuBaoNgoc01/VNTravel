@@ -1379,6 +1379,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 5px;
 }
 
 .box-comment .wrap-comment .list-cmt .post-cmt .post-content {
@@ -2046,7 +2047,7 @@ img {
     /* <<<Cmt>>> */
 
     .box-comment {
-        height: 70vh;
+        height: 80vh;
     }
 
     /* <<<Blog>>> */
@@ -2072,10 +2073,6 @@ img {
 
     .wrap-form.active {
         width: 100%;
-    }
-
-    .user-log {
-        width: 70%;
     }
 
     .wrap-form form {
@@ -2194,10 +2191,6 @@ img {
 @media (max-width: 500px) {
 
     /* <<<Active>>> */
-
-    .user-log {
-        width: 90%;
-    }
 
 
     /* <<<Title>>> */

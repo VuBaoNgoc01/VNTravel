@@ -101,8 +101,8 @@
         <div class="wrap-form" id="wrap-form">
             <form action="" class="wrap">
                 <div class="location">
-                    <label for="">Địa điểm</label>
-                    <select name="" id="">
+                    <label for="add">Địa điểm</label>
+                    <select name="add" id="add" required>
                         <option value="0">Địa điểm</option>
                         <option value="1">Hà Nội</option>
                         <option value="2">Ninh Bình</option>
@@ -113,22 +113,16 @@
                     </select>
                 </div>
                 <div class="depature">
-                    <label for="">
+                    <label for="depature">
                         Ngày khởi hành
                     </label>
-                    <input type="date" placeholder="Ngày khởi hành">
+                    <input type="date" id="depature" placeholder="Ngày khởi hành" required>
                 </div>
-                <div class="adult">
-                    <label for="">Người lớn</label>
-                    <input type="text" placeholder="0 người lớn">
+                <div class="people">
+                    <label for="pax">Số người</label>
+                    <input type="text" id="pax" placeholder="0" required>
                 </div>
-                <div class="children">
-                    <label for="">
-                        Trẻ nhỏ
-                    </label>
-                    <input type="text" placeholder="0 Trẻ nhỏ">
-                </div>
-                <button class="btn-search">
+                <button type="submit" class="btn-search">
                     Tìm kiếm
                 </button>
             </form>
