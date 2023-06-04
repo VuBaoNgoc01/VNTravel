@@ -345,7 +345,7 @@ img {
 
 /* ---Form--- */
 .wrap-form {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     bottom: 2%;
     left: 50%;
@@ -372,7 +372,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #4366c566;
+    background-color: #4366c5ab;
     box-shadow: 0 0 20px #00000099;
     padding: 30px;
     gap: 30px;
@@ -475,7 +475,7 @@ img {
 .user-log {
     position: absolute;
     z-index: 10;
-    top: 120%;
+    top: 150%;
     right: 0%;
     width: 230px;
     padding: 15px;
@@ -521,10 +521,12 @@ img {
     padding: 10px 10px;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 0.25s linear;
 }
 
 .user-log .user a:hover {
     background-color: #7ca4de;
+    transition: all 0.25s linear;
 }
 
 
@@ -553,12 +555,12 @@ img {
     transition: all 0.25s linear;
 }
 
-.box-navbar.scrollMenu .wrap-navbar .box-menu .wrap-menu .menu li a {
+.box-navbar.scrollMenu .wrap-navbar .box-menu .wrap-menu .menu li>a {
     color: var(--primary-color);
     transition: all 0.25s linear;
 }
 
-.box-navbar.scrollMenu .wrap-navbar .box-cta a {
+.box-navbar.scrollMenu .wrap-navbar .box-cta>a {
     color: var(--primary-color);
     transition: all 0.25s linear;
 }

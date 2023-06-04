@@ -86,7 +86,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 5px;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
 .box-profile .wrap-profile .menu-profile .info-profile span.name {
