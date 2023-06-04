@@ -181,12 +181,30 @@ img {
 }
 
 .box-navbar .wrap-navbar .box-menu .wrap-menu .menu li a {
+    position: relative;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     letter-spacing: 0.5px;
     font-family: var(--normal-font);
     color: #fff;
+    transition: all 0.25s linear;
+}
+
+.box-navbar .wrap-navbar .box-menu .wrap-menu .menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border: 12px;
+    background-color: #fff;
+    transition: all 0.25s linear;
+}
+
+.box-navbar .wrap-navbar .box-menu .wrap-menu .menu li a:hover:after {
+    width: 100%;
     transition: all 0.25s linear;
 }
 
@@ -272,8 +290,19 @@ img {
     cursor: pointer;
 }
 
+.box-navbar .wrap-navbar .box-cta>a:active {
+    transform: scale(0.9);
+}
+
 .box-navbar .wrap-navbar .box-cta>a>i {
     font-size: 24px;
+    transition: all 0.25s linear;
+}
+
+.box-navbar .wrap-navbar .box-cta>a:hover>i {
+    color: #e1eaf8;
+    font-weight: 500;
+    transition: all 0.25s linear;
 }
 
 .box-navbar .wrap-navbar .box-cta .cta-search .fa-magnifying-glass-location {
@@ -571,6 +600,29 @@ img {
 
 .box-navbar.scrollMenu #menu-child:hover .line {
     background-color: var(--hover-color);
+}
+
+.box-navbar.scrollMenu .wrap-navbar .box-menu .wrap-menu .menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border: 12px;
+    background-color: var(--primary-color);
+    transition: all 0.25s linear;
+}
+
+.box-navbar.scrollMenu .wrap-navbar .box-menu .wrap-menu .menu li a:hover:after {
+    width: 100%;
+    transition: all 0.25s linear;
+}
+
+.box-navbar.scrollMenu .wrap-navbar .box-cta>a:hover>i {
+    color: #7ca4de;
+    font-weight: 500;
+    transition: all 0.25s linear;
 }
 
 /* Styling Button scroll-to-top */
