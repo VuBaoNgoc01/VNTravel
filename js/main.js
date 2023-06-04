@@ -87,3 +87,49 @@ const search = () => {
 }
 
 // <<<<<===END===>>>>>
+
+
+//search suggestions
+let searchable = [
+    'Hà Nội',
+    'Hải Phòng',
+    'Ninh Bình',
+    'Hội An',
+    'Huế',
+    'Sapa',
+    'Hồ Hoàn Kiếm',
+    'Vịnh Hạ Long',
+    'Bãi Cháy',
+    'Nha Trang',
+    'Tràng An'
+];
+
+const searchInput = document.getElementById('search-input');
+const searchWrapper = document.querySelector('.search-input');
+const resultsWrapper = document.querySelector('.results');
+
+searchInput.addEventListener('keyup', () => {
+    let results = [];
+    let input = searchInput.value;
+    if (input.length) {
+        results = searchable.filter((item) => {
+            return item.toLowerCase().includes(input.toLowerCase());
+        });
+    }
+    renderResults(results);
+});
+
+function renderResults(results) {
+    if (!results.length) {
+        return searchWrapper.classList.remove('show');
+    }
+
+    const content = results
+        .map((item) => {
+            return `<li>${item}</li>`;
+        })
+        .join('');
+
+    searchWrapper.classList.add('show');
+    resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+}

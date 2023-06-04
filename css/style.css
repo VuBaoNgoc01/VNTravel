@@ -2144,8 +2144,19 @@ img {
     .box-destination .wrap-destination .title-destination h3,
     .box-tour .wrap-tour .title-tour h3,
     .box-blog .wrap-blog .title-blog h3,
-    .box-partner .wrap-partner .title-partner h3 {
+    .box-partner .wrap-partner .title-partner h3,
+    .box-banner .title-banner h1 {
         font-size: 35px;
+        line-height: 40px;
+    }
+
+    .box-banner .title-banner span {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .box-banner .title-banner .back-page a {
+        font-size: 14px;
     }
 
     /* <<<Section>>> */
