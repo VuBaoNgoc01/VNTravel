@@ -26,14 +26,12 @@ finByPrice.forEach(button => button.addEventListener("click", findPrice));
 //Active change grid filter
 
 const btnGrid = document.getElementById("btn-grid");
-const gridFilter = document.getElementById("grid-filter");
 const filterChange = document.getElementById("list-tour");
 
 
 btnGrid.addEventListener("click", () => {
     btnGrid.classList.toggle("active");
     filterChange.classList.toggle("active");
-    gridFilter.classList.toggle("active");
 });
 
 

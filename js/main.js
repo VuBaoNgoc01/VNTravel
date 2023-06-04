@@ -32,6 +32,15 @@ btnBoxSearch.addEventListener("click", () => {
     boxSearch.classList.toggle("open");
 });
 
+const btnGrid = document.getElementById("btn-grid");
+const gridFilter = document.getElementById("grid-filter");
+
+
+btnGrid.addEventListener("click", () => {
+    btnGrid.classList.toggle("active");
+    gridFilter.classList.toggle("active");
+});
+
 
 // <<<<<===END===>>>>>
 
