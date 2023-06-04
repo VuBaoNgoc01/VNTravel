@@ -267,7 +267,7 @@
 .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company h3,
 .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company h3 {
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 35px;
     margin: 0px 0px 15px 0px;
@@ -916,6 +916,16 @@
 
 @media (max-width: 1000px) {
 
+    .box-about-company .wrap-about-company .title-about-company h1,
+    .box-about-entrada .wrap-about-entrada .title-about-entrada h1,
+    .box-service-company h3,
+    .box-team .wrap-team .introduce-team h3,
+    .box-about-contact .wrap-about-contact .title-about-contact h3 {
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: 15px;
+    }
+
     .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
     .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story .box-about-entrada .wrap-about-entrada .content-about-vntravel .introduce-company .img-introduce,
     .box-about-entrada .wrap-about-entrada .content-about-vntravel .story-company .img-story {
@@ -947,8 +957,17 @@
 @media (max-width: 768px) {
 
     .box-about-company .wrap-about-company .title-about-company h1,
-    .box-about-entrada .wrap-about-entrada .title-about-entrada h1 {
-        font-size: 30px;
+    .box-about-entrada .wrap-about-entrada .title-about-entrada h1,
+    .box-service-company h3,
+    .box-team .wrap-team .introduce-team h3,
+    .box-about-contact .wrap-about-contact .title-about-contact h3 {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .box-about-company .wrap-about-company .title-about-company p {
+        font-size: 16px;
     }
 
     .box-about-company .wrap-about-company .content-about-company .card-about-company .img-card-about {
@@ -1007,6 +1026,28 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .box-team {
+        height: auto;
+    }
+
+    .box-team .wrap-team,
+    .box-about-contact .wrap-about-contact .contact-action {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .box-team .wrap-team .img-team {
+        height: 300px;
+        width: 100%;
+    }
+
+    .box-about-contact .wrap-about-contact .contact-action .call-action,
+    .box-about-contact .wrap-about-contact .contact-action form {
+        width: 100%;
     }
 }
 

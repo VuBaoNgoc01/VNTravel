@@ -202,9 +202,10 @@
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-title span {
-    color: #196232;
+    color: #3f59b6;
     font-size: 18px;
     line-height: 24px;
+    text-align: right;
 }
 
 .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-title span::before {
@@ -658,5 +659,9 @@
 
     .box-page-blog .wrap-page-blog .content-blog .sub-reply-cmt {
         padding: 15px;
+    }
+
+    .box-page-blog .wrap-page-blog .content-page-blog .card-page-blog .info-card-page-blog .info-view .author-view .btn-share i>ul {
+        right: -50px;
     }
 }

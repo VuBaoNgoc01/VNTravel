@@ -33,9 +33,27 @@
     transition: all 0.25s linear;
 }
 
+.box-navbar .wrap-navbar .box-menu.active .wrap-menu .menu li a {
+    color: #fff !important;
+    transition: all 0.25s linear;
+}
+
+.box-navbar.scrollMenu .wrap-navbar .box-menu.active .wrap-menu .menu li a {
+    color: #fff !important;
+    transition: all 0.25s linear;
+}
+
 .box-navbar .wrap-navbar .box-cta a {
     color: var(--primary-color) !important;
     transition: all 0.25s linear;
+}
+
+.box-navbar .wrap-navbar .box-logo.active #menu-child .line {
+    background-color: #fff !important;
+}
+
+#menu-child .line {
+    background-color: var(--primary-color) !important;
 }
 
 .box-detail-tour {
@@ -289,7 +307,7 @@
 }
 
 .box-info-detail .nav-info-detail {
-    z-index: 99;
+    z-index: 1;
     position: sticky;
     top: 9%;
     width: 99%;
@@ -989,7 +1007,7 @@ th {
         left: 0;
         z-index: -1;
         width: 100%;
-        height: 80vh;
+        height: 65vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1001,10 +1019,16 @@ th {
         top: 0%;
         transform: translate(0%, 0%);
         width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .box-detail-tour .wrap-detail-tour .book-detail-tour .title-detail-tour {
+        margin: 0;
+        width: 95%;
     }
 
     .tab-info-detail {
@@ -1051,7 +1075,7 @@ th {
 @media (max-width: 768px) {
 
     .box-detail-tour .wrap-detail-tour .book-detail-tour .content-detail-tour {
-        width: 80%;
+        width: 95%;
         display: grid;
         grid-template-columns: 100%;
         gap: 30px;
