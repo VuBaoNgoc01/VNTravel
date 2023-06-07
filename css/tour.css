@@ -185,6 +185,7 @@
 
 .box-tourPage .wrap-tourPage .list-tour .title-list-tour h2 {
     font-family: var(--normal-font);
+    color: #3f59b6;
     font-size: 30px;
     font-weight: 700;
     width: 100%;
@@ -313,7 +314,7 @@
 
 .box-tourPage .wrap-tourPage .list-tour .list-post .post-card .content-card .title-card h3 a {
     font-family: var(--normal-font);
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
     color: #252525;
     overflow: hidden;
@@ -429,8 +430,10 @@
     background-color: var(--primary-color);
     font-family: var(--normal-font);
     font-size: 16px;
+    overflow: hidden;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 0 20px #00000033;
     transition: all 0.25s linear;
 }
 
@@ -514,11 +517,12 @@
 
 .box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people {
     position: absolute;
-    top: 40%;
-    right: 5px;
-    background-color: #fff;
+    top: 38%;
+    right: 12px;
+    background-color: var(--primary-color);
+    border: 5px solid #fff;
     padding: 10px 25px 10px 10px;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -527,14 +531,14 @@
 
 .box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people i {
     font-size: 18px;
-    color: var(--primary-color);
+    color: #fff;
 }
 
 .box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people span {
     font-size: 16px;
     font-family: var(--normal-font);
     font-weight: 500;
-    color: var(--primary-color);
+    color: #fff;
 }
 
 .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people {
@@ -709,10 +713,6 @@
 
     .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .content-card>.info-book ::after {
         display: none;
-    }
-
-    .box-tourPage .wrap-tourPage .list-tour .list-post .post-card .content-card .title-card {
-        margin-bottom: 15px;
     }
 
     .list-tour .list-post .post-card .content-card .info-book .eval-tour .price-tour span {

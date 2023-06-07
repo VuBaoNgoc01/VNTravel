@@ -110,7 +110,7 @@
 
 .box-about-company .wrap-about-company .title-about-company p {
     color: #1f2933;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 25px;
     margin: 0px 0px 12px;
@@ -209,7 +209,7 @@
 
 .box-about-entrada .wrap-about-entrada .title-about-entrada p {
     color: #1f2933;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.8px;
     line-height: 25px;
     margin: 0px 0px 12px;
@@ -961,13 +961,17 @@
     .box-service-company h3,
     .box-team .wrap-team .introduce-team h3,
     .box-about-contact .wrap-about-contact .title-about-contact h3 {
-        font-size: 35px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 35px;
         margin-bottom: 15px;
     }
 
+    .box-about-company .wrap-about-company .title-about-company {
+        margin: 0;
+    }
+
     .box-about-company .wrap-about-company .title-about-company p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .box-about-company .wrap-about-company .content-about-company .card-about-company .img-card-about {
@@ -1016,6 +1020,7 @@
         padding: 50px 30px;
     }
 
+
     .box-achieve .wrap-achieve .content-achieve {
         flex-direction: column;
     }
@@ -1026,6 +1031,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .box-slogan .wrap-slogan .slogan h1 {
+        font-size: 20px;
     }
 
     .box-team {
@@ -1040,6 +1049,15 @@
         gap: 30px;
     }
 
+    .box-team .wrap-team .introduce-team {
+        padding: 0;
+    }
+
+    .box-team .wrap-team .introduce-team p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
     .box-team .wrap-team .img-team {
         height: 300px;
         width: 100%;
@@ -1048,6 +1066,20 @@
     .box-about-contact .wrap-about-contact .contact-action .call-action,
     .box-about-contact .wrap-about-contact .contact-action form {
         width: 100%;
+        padding: 0;
+    }
+
+    .box-about-contact .wrap-about-contact .contact-action .call-action p,
+    .box-about-contact .wrap-about-contact .contact-action .call-action .call-tel span {
+        font-size: 14px;
+    }
+
+    .box-about-contact .wrap-about-contact .contact-action .call-action .call-tel a {
+        font-size: 24px;
+    }
+
+    .box-about-contact .wrap-about-contact .contact-action form .enter-info {
+        flex-direction: column;
     }
 }
 

@@ -1067,7 +1067,9 @@ th {
     font-family: var(--normal-font);
     width: 100%;
     text-align: left;
+    padding-bottom: 15px;
     margin-bottom: 15px;
+    border-bottom: 1px solid #cadaf3;
 }
 
 .form-bookNow form {
@@ -1099,6 +1101,7 @@ th {
 .form-bookNow form .info-author .enter-name label,
 .form-bookNow form .info-author .enter-gender label {
     font-size: 18px;
+    font-weight: 600;
     color: #222222;
     margin-bottom: 15px;
     width: 100%;
@@ -1110,7 +1113,7 @@ th {
     width: 100%;
     border: 1px solid #7ca4de;
     background-color: #f2f6fc;
-    color: #787878;
+    color: #666666;
     padding: 15px;
     outline: none;
     resize: none;
@@ -1131,6 +1134,7 @@ th {
 .form-bookNow form>div>label {
     display: inline-block;
     font-size: 16px;
+    font-weight: 600;
     color: #222222;
     margin-bottom: 15px;
     width: 100%;
@@ -1141,7 +1145,7 @@ th {
     width: 100%;
     border: 1px solid #7ca4de;
     background-color: #f2f6fc;
-    color: #787878;
+    color: #666666;
     padding: 15px;
     outline: none;
     font-size: 16px;
@@ -1153,7 +1157,7 @@ th {
     width: 100%;
     border: 1px solid #7ca4de;
     background-color: #f2f6fc;
-    color: #787878;
+    color: #666666;
     padding: 15px;
     outline: none;
     resize: none;

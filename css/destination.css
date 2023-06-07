@@ -510,6 +510,15 @@
         width: 100%;
     }
 
+    .box-destinationPage .wrap-destinationPage .title-destinationPage {
+        margin-bottom: 15px;
+    }
+
+    .box-destinationPage .wrap-destinationPage .title-destinationPage h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
     /* <<<Filter grid>>> */
     .box-destinationPage .wrap-destinationPage .list-destination.active .card-destination {
         flex-direction: column;

@@ -159,6 +159,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7ca4de;
+    margin-bottom: 15px;
 }
 
 .box-contact .wrap-contact .how-contact .form-contact .title-form-contact h3 {
@@ -196,7 +199,7 @@
     border: none;
     background-color: transparent;
     border-bottom: 1px solid #7ca4de;
-    padding: 10px 5px 5px 5px;
+    padding: 10px 20px;
     outline: none;
     font-size: 16px;
     width: 70%;
@@ -214,14 +217,14 @@
 }
 
 .box-contact .wrap-contact .how-contact .form-contact button {
-    padding: 10px;
+    padding: 15px;
     border: none;
     font-family: var(--normal-font);
     background: var(--primary-color);
     width: 69%;
     margin: 0px 0px 0px 125px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     font-weight: 600;
     text-transform: uppercase;
@@ -324,6 +327,7 @@
 
     .box-contact .wrap-contact .how-contact .form-contact {
         padding: 30px 10px;
+        border: 3px solid #a6c3ea;
     }
 
     .box-contact .wrap-contact .how-contact .form-contact .input {
@@ -341,7 +345,7 @@
 
     .box-contact .wrap-contact .how-contact .form-contact .input input,
     .box-contact .wrap-contact .how-contact .form-contact .input textarea {
-        padding: 5px;
+        padding: 10px 5px;
         margin-bottom: 20px;
         font-size: 14px;
         width: 100%;
