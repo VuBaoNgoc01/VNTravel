@@ -846,7 +846,8 @@
     gap: 20px;
 }
 
-.tab-info-detail .gallery-detail .card-photo-detail {
+.tab-info-detail .gallery-detail .
+{
     position: relative;
     display: inline-flex;
     overflow: hidden;
@@ -865,7 +866,7 @@
 .tab-info-detail .gallery-detail .card-photo-detail img {
     display: inline-block;
     width: 100%;
-    height: 100%;
+/*     height: 100%; */
     object-fit: cover;
     transition: all 0.2s linear;
 }
