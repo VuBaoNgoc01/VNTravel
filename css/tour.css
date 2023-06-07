@@ -14,7 +14,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: row-reverse;
     gap: 30px;
     width: 100%;
 }

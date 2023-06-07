@@ -246,7 +246,7 @@
     margin: 30px 0px;
 }
 
-.box-detail-tour .wrap-detail-tour .book-detail-tour .btn-book-tour button {
+.box-detail-tour .wrap-detail-tour .book-detail-tour .btn-book-tour a {
     padding: 10px;
     width: 350px;
     border: none;
@@ -254,14 +254,18 @@
     background-color: var(--primary-color);
     font-size: 28px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 0 20px #00000033;
 }
 
-.hvr-shutter-in-horizontal:before {
+/* .hvr-shutter-in-horizontal:before {
     border-radius: 8px !important;
     background: #b0a377 !important;
-}
+} */
 
 .box-detail-tour .wrap-detail-tour .book-detail-tour .icon-view-detail {
     display: flex;
@@ -294,6 +298,8 @@
     color: #007fff;
     transition: all 0.3s linear;
 }
+
+
 
 /* Styling tab-ui */
 
@@ -821,6 +827,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
+    box-shadow: 0 10px 20px #00000033;
     transition: all 0.3s ease-in;
 }
 
@@ -964,6 +971,7 @@ th {
     font-weight: 600;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 10px 20px #00000033;
 }
 
 .tab-info-detail table td>button::after {
@@ -984,6 +992,187 @@ th {
     transition: all 0.3s linear;
 }
 
+
+/* <<<==Book Tour==>>> */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Styling form book-now */
+.form-bookNow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px #00000033;
+}
+
+.form-bookNow .wrap-bookNow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.form-bookNow .wrap-bookNow form,
+.form-bookNow .wrap-bookNow .img-tour {
+    width: 50%;
+    height: 100%;
+}
+
+.form-bookNow .wrap-bookNow .img-tour {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00000033;
+}
+
+.form-bookNow .wrap-bookNow .img-tour img {
+    transition: all 0.25s linear;
+}
+
+.form-bookNow .wrap-bookNow .img-tour:hover img {
+    transform: scale(1.2);
+    transition: all 0.25s linear;
+}
+
+.form-bookNow h3 {
+    font-size: 35px;
+    margin-bottom: 60px;
+    font-family: var(--normal-font);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-bookNow form h4 {
+    font-size: 24px;
+    color: #252525;
+    font-weight: 600;
+    font-family: var(--normal-font);
+    width: 100%;
+    text-align: left;
+}
+
+.form-bookNow form>span {
+    font-size: 14px;
+    color: #252525;
+    font-family: var(--normal-font);
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-bookNow form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-bookNow form .info-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+}
+
+.form-bookNow form .info-author .enter-name,
+.form-bookNow form .info-author .enter-gender {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-bookNow form .info-author .enter-name label,
+.form-bookNow form .info-author .enter-gender label {
+    font-size: 18px;
+    color: #222222;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.form-bookNow form .info-author .enter-name input,
+.form-bookNow form .info-author .enter-gender select {
+    width: 100%;
+    border: 1px solid #7ca4de;
+    background-color: #f2f6fc;
+    color: #787878;
+    padding: 15px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 0px 20px #00000022;
+}
+
+.form-bookNow form>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-bookNow form>div>label {
+    display: inline-block;
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+.form-bookNow form>div>input {
+    width: 100%;
+    border: 1px solid #7ca4de;
+    background-color: #f2f6fc;
+    color: #787878;
+    padding: 15px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0px 20px #00000022;
+}
+
+.form-bookNow form>div>textarea {
+    width: 100%;
+    border: 1px solid #7ca4de;
+    background-color: #f2f6fc;
+    color: #787878;
+    padding: 15px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0px 20px #00000022;
+}
+
+.form-bookNow form button {
+    margin-top: 15px;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00000033;
+}
 
 /* Reponsive */
 
@@ -1070,6 +1259,17 @@ th {
         width: 100%;
         overflow-x: auto;
     }
+
+    .form-bookNow .wrap-bookNow {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .form-bookNow .wrap-bookNow form,
+    .form-bookNow .wrap-bookNow .img-tour {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1084,7 +1284,7 @@ th {
         justify-content: space-between;
     }
 
-    .box-detail-tour .wrap-detail-tour .book-detail-tour .btn-book-tour button {
+    .box-detail-tour .wrap-detail-tour .book-detail-tour .btn-book-tour a {
         padding: 10px;
         width: 300px;
         border: none;
@@ -1094,6 +1294,7 @@ th {
         font-weight: 500;
         color: #fff;
         cursor: pointer;
+        box-shadow: 0 10px 20px #00000033;
     }
 
     .box-info-detail .nav-info-detail .wrap-tab-info {

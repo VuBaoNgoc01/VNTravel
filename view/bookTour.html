@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/about.css">
+        <link rel="stylesheet" href="../css/detailTour.css">
+        <link rel="shortcut icon" type="image/png" href="/image/about-2.png" />
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <title>About us</title>
+    </head>
+
+    <body>
+
+        <!-- layout-page -->
+        <div w3-include-html="navbar.html"></div>
+
+        <!-- Section home -->
+        <section class="box-banner">
+            <img src="../images/dalat.jpg" alt="">
+            <div class="filter-bg"></div>
+            <div class="wrap title-banner">
+                <h1>Đặt tour</h1>
+                <div class="back-page">
+                    <a href="../view/index.html">Trang chủ</a>
+                    <a href="../view/tour.html">Tours</a>
+                    <a href="../view/detailTour.html">Chi tiết tour</a>
+                    <a>Đặt tour</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section form book tour -->
+
+        <div class="form-bookNow" id="form-bookNow">
+            <h3 class="titleTour">Tour Biển Nha Trang</h3>
+            <div class="wrap wrap-bookNow">
+                <form action="" class="wrap">
+                    <h4>Điền thông tin cá nhân</h4>
+                    <span>Thông tin bắt buộc có <span style="color: red;">*</span> </span>
+                    <div class="info-author">
+                        <div class="enter-name">
+                            <label for="fullName">Họ và tên <span style="color: red;">*</span> </label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <!-- <div class="enter-gender">
+                                        <label for="gender">Giới tính <span style="color: red;">*</span></label>
+                                        <select name="" id="gender" required>
+                                            <option value="">Gender</option>
+                                            <option value="1">Mr</option>
+                                            <option value="2">Mrs</option>
+                                        </select>
+                                    </div> -->
+                    </div>
+                    <div class="enter-mail">
+                        <label for="yourEmail">Email <span style="color: red;">*</span> </label>
+                        <input type="email" id="yourEmail" required>
+                    </div>
+                    <div class="enter-phone">
+                        <label for="yourPhone">Số điện thoại
+                            <span style="color: red;">*</span>
+                        </label>
+                        <input type="text" id="yourPhone" required>
+                    </div>
+                    <div class="enter-people">
+                        <label for="numberPeople">Số người
+                            <span style="color: red;">*</span>
+                        </label>
+                        <input type="text" id="numberPeople" required>
+                    </div>
+                    <div class="enter-more">
+                        <label for="infoMore">Lời nhắn khác</label>
+                        <textarea name="" id="infoMore" rows="7" placeholder="Nội dung..."></textarea>
+                    </div>
+                    <button class="btn-send">
+                        Book Now
+                    </button>
+                </form>
+                <div class="img-tour">
+                    <img src="../images/nhatrang4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Footer -->
+
+        <div w3-include-html="footer.html"></div>
+
+        <!-- script  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/profile.js"></script>
+        <script src="../js/w3-import.js"></script>
+
+
+    </body>
+
+</html>
