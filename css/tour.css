@@ -1,0 +1,1110 @@
+/* Styling section tour page */
+.box-tourPage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.box-tourPage .wrap-tourPage {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.box-tourPage .wrap-tourPage .btn-boxFilter {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.box-tourPage .wrap-tourPage .btn-boxFilter:active {
+  transform: scale(0.9);
+}
+
+.box-tourPage .wrap-tourPage .btn-boxFilter i {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.box-tourPage .wrap-tourPage .search-tour {
+  position: sticky;
+  top: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 25%;
+  padding: 15px 0;
+  border-radius: 12px;
+  background-color: #f2f6fc;
+  box-shadow: 0 0px 20px #00000022;
+}
+
+.box-tourPage .wrap-tourPage .search-tour > h3 {
+  font-size: 24px;
+  font-family: var(--normal-font);
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+  background-color: #a6c3ea;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-input input {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px 30px 15px 45px;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #252525;
+  font-family: var(--normal-font);
+  width: 100%;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-input i {
+  position: absolute;
+  left: 40px;
+  font-size: 22px;
+  color: #333333;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.box-tourPage .wrap-tourPage .search-tour .find {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f2f6fc;
+  padding: 30px 0;
+  gap: 15px;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .find:not(:last-child) {
+  border-bottom: 1px solid #cadaf3;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .find h3 {
+  position: relative;
+  font-family: var(--normal-font);
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 600;
+  padding: 0 30px;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .find .arrange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 30px;
+  gap: 15px;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .find .arrange select {
+  border: 1px solid #a6c3ea;
+  outline: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--color900-color);
+  font-family: var(--normal-font);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-btnName,
+.box-tourPage .wrap-tourPage .search-tour .search-btnPrice {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 30px;
+  gap: 15px;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-btnName button,
+.box-tourPage .wrap-tourPage .search-tour .search-btnPrice button {
+  padding: 8px 18px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #a6c3ea;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--color900-color);
+  font-family: var(--normal-font);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-btnName button:hover,
+.box-tourPage .wrap-tourPage .search-tour .search-btnPrice button:hover {
+  color: #fff;
+  background-color: #a6c3ea;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-btnName button.active,
+.box-tourPage .wrap-tourPage .search-tour .search-btnPrice button.active-price {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.box-tourPage .wrap-tourPage .search-tour .search-btnName button:active,
+.box-tourPage .wrap-tourPage .search-tour .search-btnPrice button:active {
+  transform: scale(0.9);
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+/* <<<List Tour>>> */
+
+.box-tourPage .wrap-tourPage .list-tour {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  width: 75%;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .title-list-tour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  border-bottom: 1px solid #a6c3ea;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .title-list-tour h2 {
+  font-family: var(--normal-font);
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter:active {
+  transform: scale(0.9);
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter i {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter .fa-grid {
+  display: block;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter.active .fa-grid {
+  display: none;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter .fa-list {
+  display: none;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .grid-filter.active .fa-list {
+  display: block;
+}
+
+/* <<<List post tour>>> */
+
+.box-tourPage .wrap-tourPage .list-tour .list-post {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 20px #00000022;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  gap: 15px;
+  max-width: 350px;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card.hide {
+  display: none;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card.hide-price {
+  display: none;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card:hover {
+  box-shadow: 0 10px 20px #00000066;
+  transform: translateY(-8px);
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .img-card {
+  display: inline-block;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .img-card img {
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post
+  .post-card:hover
+  .img-card
+  img {
+  transform: scale(1.2);
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 15px 15px;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  h3 {
+  width: 100%;
+  text-align: left;
+  font-family: var(--normal-font);
+  font-size: 18px;
+  color: #252525;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  h3
+  a {
+  font-family: var(--normal-font);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  h3
+  a:hover {
+  color: var(--primary-color);
+}
+
+.list-tour .list-post .post-card .content-card .title-card .info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .time-tour,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .location-tour,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .tag-tour {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .time-tour
+  i,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .location-tour
+  i,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .tag-tour
+  i {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .time-tour
+  p,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .location-tour
+  p,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .tag-tour
+  p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: var(--normal-font);
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .time-tour
+  span,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .location-tour
+  span,
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .title-card
+  .info-card
+  .tag-tour
+  span {
+  font-size: 1rem;
+  color: #333333;
+  font-family: var(--normal-font);
+}
+
+.list-tour .list-post .post-card .content-card .info-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.list-tour .list-post .post-card .content-card .info-book .eval-tour {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .rate-tour {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .rate-tour
+  .vote-star {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .rate-tour
+  .vote-star
+  i {
+  color: #ffa11a;
+  font-size: 0.9rem;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .rate-tour
+  .number-rate
+  span {
+  font-family: var(--normal-font);
+  font-size: 12px;
+  color: #333333;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .price-tour {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--normal-font);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.list-tour
+  .list-post
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .price-tour
+  span {
+  font-family: var(--normal-font);
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.list-tour .list-post .post-card .content-card .info-book .btn-book {
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  width: 100%;
+  background-color: var(--primary-color);
+  font-family: var(--normal-font);
+  font-size: 1rem;
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00000033;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.list-tour .list-post .post-card .content-card .info-book .btn-book:active {
+  transform: scale(0.9);
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.list-tour .list-post .post-card .content-card .info-book .btn-book a {
+  display: inline-block;
+  padding: 15px;
+  font-family: var(--normal-font);
+  font-size: 1.3rem;
+  color: #fff;
+  width: 100%;
+}
+
+/* <<<List post tour add Active>>> */
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card {
+  position: relative;
+  flex-direction: row;
+  max-width: 100%;
+  transition: all.25s linear;
+  -webkit-transition: all.25s linear;
+  -moz-transition: all.25s linear;
+  -ms-transition: all.25s linear;
+  -o-transition: all.25s linear;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .img-card {
+  height: 275px;
+  width: 35vw;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card
+  .title-card
+  h3
+  a {
+  -webkit-line-clamp: 2;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card {
+  flex-direction: row;
+  gap: 15px;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card
+  .title-card {
+  width: 70%;
+  position: relative;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card
+  > .info-book
+  ::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -15px;
+  height: 270px;
+  width: 1px;
+  background-color: #dedede;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card
+  .info-book {
+  width: 30%;
+  position: relative;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .content-card
+  .info-book
+  .eval-tour
+  .price-tour {
+  align-items: center;
+  justify-content: center;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people {
+  position: absolute;
+  top: 34%;
+  right: 0px;
+  background-color: var(--primary-color);
+  border: 7px solid #fff;
+  padding: 10px 10px;
+  border-radius: 12px 4px 12px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  -webkit-border-radius: 12px 4px 12px 4px;
+  -moz-border-radius: 12px 4px 12px 4px;
+  -ms-border-radius: 12px 4px 12px 4px;
+  -o-border-radius: 12px 4px 12px 4px;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people i {
+  font-size: 18px;
+  color: #fff;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post .post-card .people span {
+  font-size: 1rem;
+  font-family: var(--normal-font);
+  font-weight: 500;
+  color: #fff;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people {
+  position: relative;
+  background-color: #fff;
+  padding: 0;
+  margin-left: 10px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card .people i {
+  font-size: 1rem;
+  color: #333333;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .people
+  span {
+  font-size: 1rem;
+  font-family: var(--normal-font);
+  font-weight: 400;
+  color: #333333;
+}
+
+.box-tourPage
+  .wrap-tourPage
+  .list-tour
+  .list-post.active
+  .post-card
+  .people
+  span::before {
+  content: "Số người: ";
+  font-size: 1rem;
+  font-family: var(--normal-font);
+  color: #333333;
+}
+
+/* <<<==Reponsive==>>> */
+
+@media (max-width: 1400px) {
+  .box-tourPage .wrap-tourPage {
+    padding: 0 15px;
+  }
+
+  .box-tourPage .wrap-tourPage .list-tour .list-post .post-card {
+    max-width: 100%;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour .search-btnName button,
+  .box-tourPage .wrap-tourPage .search-tour .search-btnPrice button {
+    padding: 8px 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .box-tourPage .wrap-tourPage .list-tour .list-post {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box-tourPage .wrap-tourPage .btn-boxFilter {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .box-tourPage .wrap-tourPage .btn-boxFilter.open .fa-light.fa-filter-list {
+    display: none;
+  }
+
+  .box-tourPage .wrap-tourPage .btn-boxFilter .fa-solid.fa-filter-list {
+    display: none;
+  }
+
+  .box-tourPage .wrap-tourPage .btn-boxFilter.open .fa-solid.fa-filter-list {
+    display: block;
+  }
+
+  .box-tourPage .wrap-tourPage {
+    flex-direction: column;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour {
+    position: relative;
+    width: 100%;
+    top: 0;
+    height: 0;
+    margin-top: -50px;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.1s linear;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour.open {
+    height: 100%;
+    margin-top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0deg);
+    transition: all.25s linear;
+    -webkit-transition: all.25s linear;
+    -moz-transition: all.25s linear;
+    -ms-transition: all.25s linear;
+    -o-transition: all.25s linear;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour .search-btnName,
+  .box-tourPage .wrap-tourPage .search-tour .search-btnPrice {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .box-tourPage .wrap-tourPage .list-tour {
+    width: 100%;
+  }
+
+  .box-tourPage .wrap-tourPage .list-tour .list-post {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-tourPage .wrap-tourPage {
+    flex-direction: column;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour .search-btnName,
+  .box-tourPage .wrap-tourPage .search-tour .search-btnPrice {
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  }
+
+  .box-tourPage .wrap-tourPage .list-tour .list-post {
+    grid-template-columns: auto;
+  }
+
+  /* <<<card active>>> */
+
+  .box-tourPage .wrap-tourPage .list-tour .title-list-tour h2 {
+    font-size: 1.5rem;
+  }
+
+  .box-tourPage .wrap-tourPage .list-tour .list-post.active .post-card {
+    flex-direction: column;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .img-card {
+    width: 100%;
+    height: 250px;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card {
+    flex-direction: column;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    .title-card {
+    width: 100%;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    .info-book {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    .info-book
+    .eval-tour {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    .info-book
+    .eval-tour
+    .price-tour {
+    align-items: flex-start;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    .info-book
+    .btn-book {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 40%;
+    border-radius: 50px 12px 12px 5px;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    > .info-book
+    ::after {
+    display: none;
+  }
+
+  .list-tour
+    .list-post
+    .post-card
+    .content-card
+    .info-book
+    .eval-tour
+    .price-tour
+    span {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .box-tourPage .wrap-tourPage .list-tour .title-list-tour h2 {
+    font-size: 24px;
+  }
+
+  .box-tourPage
+    .wrap-tourPage
+    .list-tour
+    .list-post.active
+    .post-card
+    .content-card
+    .info-book
+    .btn-book {
+    width: 50%;
+  }
+
+  .box-tourPage .wrap-tourPage .search-tour .search-btnName,
+  .box-tourPage .wrap-tourPage .search-tour .search-btnPrice {
+    grid-template-columns: 50% 50%;
+  }
+}
