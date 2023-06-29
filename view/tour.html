@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/tour.css" />
+    <link rel="shortcut icon" type="image/png" href="/image/about-2.png" />
+    <title>Tours - VN Travel</title>
+  </head>
+
+  <body>
+    <!-- layout-page -->
+    <div w3-include-html="navbar.html"></div>
+
+    <!-- Section home -->
+    <section class="box-banner">
+      <img src="../images/nhatrang4.jpg" alt="" />
+      <div class="filter-bg"></div>
+      <div class="wrap title-banner">
+        <h1>Tours Du lịch</h1>
+        <span>The Best for Destination VN</span>
+        <div class="back-page">
+          <a href="../view/index.html">Home</a>
+          <a>Tours</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section list tour -->
+
+    <section class="box-tourPage">
+      <div class="wrap wrap-tourPage">
+        <div class="search-tour" id="search-tour">
+          <h3>Lọc thông tin</h3>
+          <div class="search-input">
+            <input
+              type="text"
+              id="find-tour"
+              placeholder="Nhập từ khóa..."
+              onkeyup="find()"
+            />
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </div>
+          <div class="find">
+            <h3>Thẻ địa điểm</h3>
+            <div class="search-btnName">
+              <button class="active" data-name="all">Tất cả</button>
+              <button data-name="hanoi">Hà Nội</button>
+              <button data-name="haiphong">Hạ Long Bay</button>
+              <button data-name="sapa">Sapa</button>
+              <button data-name="ninhbinh">Ninh Bình</button>
+              <button data-name="hoian">Hội An</button>
+              <button data-name="danang">Bà Nà Hill</button>
+              <button data-name="danang">Cầu Vàng</button>
+              <button data-name="nhatrang">Nha Trang</button>
+              <button data-name="hue">Huế</button>
+            </div>
+          </div>
+          <div class="find">
+            <h3>Giá tiền</h3>
+            <div class="search-btnPrice">
+              <button class="active-price" data-price="all">Tất cả</button>
+              <button data-price="lessFive"><i class="fa-light fa-chevron-left"></i> 5tr</button>
+              <button data-price="fiveToEight">5-8tr</button>
+              <button data-price="moreEight">
+                <i class="fa-light fa-angle-right"></i>
+                8tr
+              </button>
+            </div>
+          </div>
+          <div class="find">
+            <h3>Hành trình</h3>
+            <div class="search-btnht">
+              <button class="active-ht" data-ht="all">Tất cả</button>
+              <button data-ht="ht1">3N-2Đ</button>
+              <button data-ht="ht2">5N-4Đ</button>
+              <button data-ht="ht3">
+                7N6Đ
+              </button>
+            </div>
+          </div>
+          <div class="find">
+            <h3>Ngày bắt đầu</h3>
+            <div class="search-btnDay">
+              <button class="active-day" data-day="all">Tất cả</button>
+              <div class="box-calendar"> 
+                <div class="filter-calendar" id="filter-calendar">
+                  Chọn ngày
+                  <i class="fa-light fa-calendar"></i>
+                </div>
+                <div id="wrap-calendar">
+                  <button data-day="day1">1</button>
+                  <button data-day="day2">2</button>
+                  <button data-day="day3">3</button>
+                  <button data-day="day4">4</button>
+                  <button data-day="day5">5</button>
+                  <button data-day="day6">6</button>
+                  <button data-day="day7">7</button>
+                  <button data-day="day8">8</button>
+                  <button data-day="day9">9</button>
+                  <button data-day="day10">10</button>
+                  <button data-day="day11">11</button>
+                  <button data-day="day12">12</button>
+                  <button data-day="day13">13</button>
+                  <button data-day="day14">14</button>
+                  <button data-day="day15">15</button>
+                  <button data-day="day16">16</button>
+                  <button data-day="day17">17</button>
+                  <button data-day="day18">18</button>
+                  <button data-day="day19">19</button>
+                  <button data-day="day20">20</button>
+                  <button data-day="day21">21</button>
+                  <button data-day="day22">22</button>
+                  <button data-day="day23">23</button>
+                  <button data-day="day24">24</button>
+                  <button data-day="day25">25</button>
+                  <button data-day="day26">26</button>
+                  <button data-day="day27">27</button>
+                  <button data-day="day28">28</button>
+                  <button data-day="day29">29</button>
+                  <button data-day="day30">30</button>
+                  <button data-day="day31">31</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="find">
+            <h3>Sắp xếp</h3>
+            <div class="arrange">
+              <select name="" id="sort">
+                <option value="0">---Sắp xếp theo---</option>
+                <option value="1">Giá thấp - cao</option>
+                <option value="2">Giá cao - thấp</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="list-tour">
+          <div class="title-list-tour">
+            <div class="btn-boxFilter" id="btn-boxFilter">
+              <i class="fa-light fa-filter-list"></i>
+              <i class="fa-solid fa-filter-list"></i>
+            </div>
+            <h2>Tour du lịch</h2>
+          </div>
+          <div class="grid-filter" id="btn-grid">
+            <i class="fa-regular fa-grid"></i>
+            <i class="fa-regular fa-list"></i>
+          </div>
+          <div class="list-post" id="list-tour">
+            <div class="post-card" data-name="hanoi" data-price="lessFive" data-day="day1" data-ht="ht1">
+              <div class="img-card">
+                <img src="../images/hohoankiem.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href="../view/detailTour.html"> Tour Hà Nội - Ninh Bình (3N-2Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>1/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Hà Nội</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Hồ Hoàn Kiếm, Hà Nội</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>2.300.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="danang" data-price="fiveToEight" data-day="day2" data-ht="ht1">
+              <div class="img-card">
+                <img src="../images/cauvang.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href="../view/detailTour.html"
+                      >Tour Đà Nẵng - Bà Nà - Cầu Vàng (3N-2Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>2/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Đà Nẵng</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Đà Nẵng, Cầu Vàng, Bà Nà Hill</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>6.499.999₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="haiphong" data-price="lessFive" data-day="day1" data-ht="ht2">
+              <div class="img-card">
+                <img src="../images/halong.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href="../view/detailTour.html"
+                      >Thái Bình - Quần thể Tam Chúc (5N-4Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>1/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Hải Phòng</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Vịnh Hạ Long, Hạ Long Bay, Hải Phòng</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>2.300.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="ninhbinh" data-price="moreEight" data-day="day3" data-ht="ht2">
+              <div class="img-card">
+                <img src="../images/ninhbinh.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Thái Bình - Hạ Long Bay (5N-4Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>3/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Hải Phòng</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Tam Cốc, Tràng An, Ninh BÌnh</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>9.300.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="sapa" data-price="fiveToEight" data-day="day1" data-ht="ht1">
+              <div class="img-card">
+                <img src="../images/sapa2.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Thái Bình - Hà Nội - Sapa (3N-2Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>1/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Sapa</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Sapa</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>5.300.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="nhatrang" data-price="moreEight" data-day="day2" data-ht="ht2">
+              <div class="img-card">
+                <img src="../images/nhatrang.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Thái Bình - Nha Trang (5N-4Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>2/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Nha Trang</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Nha Trang, Khánh Hòa</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>10.076.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="hoian" data-price="fiveToEight" data-day="day1" data-ht="ht1">
+              <div class="img-card">
+                <img src="../images/phocohoian2.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Hà Nội - Hội An (3N-2Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>1/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Hội An</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Hội An, Phố Cổ</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>7.688.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="hoian" data-price="fiveToEight" data-day="day2" data-ht="ht1">
+              <div class="img-card">
+                <img src="../images/phocohoian3.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Đà Nẵng - Hội An (3N-2Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>2/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Hội An</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Chùa Cầu, Phố cổ, Hội An</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>6.555.555₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="sapa" data-price="lessFive" data-day="day1" data-ht="ht2">
+              <div class="img-card">
+                <img src="../images/ruongbacthang2.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Hà Nội - Sapa (5N-4Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>1/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Sapa</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Mường Thanh, Ruộng bậc thang, Sapa</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>2.300.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="post-card" data-name="hanoi" data-price="lessFive" data-day="day1" data-ht="ht1">
+              <div class="img-card">
+                <img src="../images/hoguom.jpg" alt="" />
+              </div>
+              <div class="content-card">
+                <div class="title-card">
+                  <h3>
+                    <a href=""
+                      >Tour Hà Nội (3N-2Đ)
+                    </a>
+                  </h3>
+                  <div class="info-card">
+                    <div class="time-tour">
+                      <i class="fa-regular fa-timer"></i>
+                      <p>Ngày khởi hành:</p>
+                      <p>1/7/2023</p>
+                    </div>
+                    <div class="location-tour">
+                      <i class="fa-regular fa-location-dot"></i>
+                      <p>Địa điểm:</p>
+                      <p>Hà Nội</p>
+                    </div>
+                    <div class="tag-tour">
+                      <i class="fa-regular fa-tag"></i>
+                      <span>Hồ Hoàn Kiếm, Hồ Gươm, Hà Nội</span>
+                    </div>
+                  </div>
+                  <div class="people">
+                    <i class="fa-light fa-users"></i>
+                    <span>10</span>
+                  </div>
+                </div>
+                <div class="info-book">
+                  <div class="eval-tour">
+                    <div class="price-tour">Giá<span>2.300.000₫</span></div>
+                    <div class="rate-tour">
+                      <div class="vote-star">
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                      </div>
+                      <div class="number-rate">
+                        <span>(21 đánh giá)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-book">
+                    <a href="../view/detailTour.html"> Đặt ngay </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <div w3-include-html="footer.html"></div>
+
+    <!-- script  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="../js/filter.js"></script>
+    <script src="../js/w3-import.js"></script>
+  </body>
+</html>

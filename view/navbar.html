@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+
+    <title>VN Travel</title>
+  </head>
+
+  <body>
+    <!-- <div class="loader">
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+      </div>
+    </div> -->
+
+    <!-- navbar -->
+
+    <nav class="box-navbar" id="box-navbar">
+      <div class="wrap wrap-navbar">
+        <div class="box-logo" id="box-logo">
+          <button type="button" id="menu-child">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </button>
+          <a href="./index.html">
+            <img src="../images/logo-VNTRAVEL.png" alt="" />
+          </a>
+        </div>
+        <div class="box-menu" id="box-menu">
+          <div class="wrap-menu" id="wrap-menu">
+            <ul class="menu">
+              <li>
+                <a href="./index.html"> Trang chủ </a>
+              </li>
+              <li>
+                <a href="../view/aboutus.html"> Giới thiệu </a>
+              </li>
+              <li>
+                <a href="../view/destination.html"> Địa điểm </a>
+              </li>
+              <li>
+                <a href="../view/tour.html"> Tours </a>
+              </li>
+              <li>
+                <a href="../view/blog.html"> Bài viết </a>
+              </li>
+              <li>
+                <a href="../view/gallery.html"> Ảnh </a>
+              </li>
+              <li>
+                <a href="../view/contact.html"> Liên hệ </a>
+              </li>
+              <div class="underline-menu"></div>
+            </ul>
+          </div>
+        </div>
+        <div class="box-cta">
+          <a class="cta-search" id="cta-search">
+            <i class="fa-light fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass-location"></i>
+          </a>
+          <a class="cta-user" id="cta-user">
+            <i class="fa-light fa-user"></i>
+          </a>
+          <div class="user-log" id="form-log">
+            <div class="user profile">
+              <a href="../view/profile.html">Thông tin cá nhân</a>
+            </div>
+            <div class="user login">
+              <a href="../view/log-acc.html">Đăng nhập</a>
+            </div>
+            <div class="user register">
+              <a href="../view/register-acc.html">Đăng ký</a>
+            </div>
+            <div class="user logout">
+              <a>Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="wrap-form" id="wrap-form">
+      <form action="" class="wrap">
+        <div class="location">
+          <label for="add">Địa điểm</label>
+          <select name="add" id="add" required>
+            <option value="0">Địa điểm</option>
+            <option value="1">Hà Nội</option>
+            <option value="2">Ninh Bình</option>
+            <option value="3">Hội An</option>
+            <option value="4">Huế</option>
+            <option value="5">Sapa</option>
+            <option value="6">Nha Trang</option>
+          </select>
+        </div>
+        <div class="depature">
+          <label for="depature"> Ngày khởi hành </label>
+          <input
+            type="date"
+            id="depature"
+            placeholder="Ngày khởi hành"
+            required
+          />
+        </div>
+        <div class="people">
+          <label for="pax">Số người</label>
+          <input type="text" id="pax" placeholder="0" required />
+        </div>
+        <button type="submit" class="btn-search">Tìm kiếm</button>
+      </form>
+    </div>
+
+    <!-- Scroll to top -->
+
+    <div class="scroll-to-top" id="scroll-to-top">
+      <i class="fa-regular fa-angle-down"></i>
+    </div>
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"
+      integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script async src="../js/app.js"></script>
+    <script async src="../js/w3-import.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
